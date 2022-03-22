@@ -6,32 +6,15 @@ Hearts Removed
 Boombox Removed
 Game Version: v3.4 
 <Placeholder> (not shown ingame)
-local telePart = script.Parent
 
-local TeleportService = game:GetService('TeleportService')
+local TeleportService = game:GetService("TeleportService")
+local gameID = 8967359816 --Game ID--    --<<Remove This And Put The Second Game "ID"<<
 
-local placeID = 8967359816
-
-
-
-local canTeleport = true
-
-
-
-local function otherGame(otherPart)
-
-	local player = game.Players:FindFirstChild(otherPart.Parent.Name)
-
-	if player and canTeleport then
-
-		canTeleport = false
-
-		TeleportService:Teleport(placeID, player)
-
+	function onTouched(hit)
+		local player = game.Players:GetPlayerFromCharacter(hit.Parent)
+		if player then
+		TeleportService:Teleport(gameID, player)
+	end
 	end
 
-end
-
-
-
-telePart.Touched:Connect(otherGame)
+script.Parent.Touched:connect(onTouched)

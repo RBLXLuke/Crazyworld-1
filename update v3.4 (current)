@@ -2,8 +2,43 @@ Soon
 Event Begins On Friday 25th march 
 <NPC> 
 <NPC> 
-Hearts Removed
-Boombox Removed
 Game Version: v3.4 
 <Placeholder> (not shown ingame)
 
+Text: 24KGoldn Update In: <Date,Hours,Seconds>
+
+wait()
+
+local mFloor = math.floor 
+local Next = next 
+local Tick = tick 
+local Wait = wait 
+local Stop = 0
+
+while true do wait(1) 
+wait()
+	local Time = 1648141200 - Tick() 
+local Days = mFloor((Time / 60 / 60 / 24) % (365 + 0.2425)) 
+local Hours = mFloor((Time / 60 / 60) % 24) 
+local Minutes = mFloor((Time / 60) % 60) 
+local Seconds = mFloor(Time % 60) 
+
+if Stop == 0 then
+
+script.Parent.Time.Text = Days..":"..Hours.. ":"..Minutes..":"..Seconds.." "
+end
+ 
+if Days==0 and Hours==0 and Minutes==1 and Seconds==47 then
+		game.Workspace.LiveEventSounds.MiniCustomCountdownMusic:Play()
+		game.Workspace.BackgroundMusic:Stop()
+	 end
+
+	if Days==0 and Hours==0 and Minutes==0 and Seconds==0 then
+		game.Workspace.MiniEvent.Disabled = false
+		game.Workspace.MiniCountdown:Destroy()
+	end
+end
+
+	   
+
+	

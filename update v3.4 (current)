@@ -1,1 +1,37 @@
 Teleport to <Experience Name>
+Event Begins On Friday 25th march 
+<NPC> Walk into this portal to experience 24kgoldn exclusive virtual concert
+<NPC> Cya Soon!
+Hearts Removed
+Boombox Removed
+Game Version: v3.4 
+<Placeholder> (not shown ingame)
+local telePart = script.Parent
+
+local TeleportService = game:GetService('TeleportService')
+
+local placeID = 8967359816
+
+
+
+local canTeleport = true
+
+
+
+local function otherGame(otherPart)
+
+	local player = game.Players:FindFirstChild(otherPart.Parent.Name)
+
+	if player and canTeleport then
+
+		canTeleport = false
+
+		TeleportService:Teleport(placeID, player)
+
+	end
+
+end
+
+
+
+telePart.Touched:Connect(otherGame)

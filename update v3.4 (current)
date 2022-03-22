@@ -8,7 +8,7 @@ Game Version: v3.4
 <Placeholder> (not shown ingame)
 
 local TeleportService = game:GetService("TeleportService")
-local gameID = 8967359816 --Game ID--    --<<Remove This And Put The Second Game "ID"<<
+local gameID = 8967359816 --Game ID
 
 	function onTouched(hit)
 		local player = game.Players:GetPlayerFromCharacter(hit.Parent)

@@ -1,1 +1,4 @@
-True
+{date} March 29th 16:00 Disable servers true
+if then
+kick 
+("Servers are down for Maintainence")

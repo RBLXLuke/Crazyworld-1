@@ -31,7 +31,6 @@ script.Parent.Touched:connect(onTouched)
 Players: Can't wait
 NPC: See ya Then :)
 
-Text: NOTICE WARNING! The hospital will be closing on 2nd april for upgrades please plan your medical issues urgently 
 Text: NOTICE WARNING! The hospital will be closing on 2nd april for upgrades please plan your issues urgently 
 
 Text.String <Coming Soon>

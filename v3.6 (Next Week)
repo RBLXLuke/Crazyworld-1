@@ -1,4 +1,4 @@
-Game  Version <v3.6>
+Experience  Version <v3.6>
 
 <NPC> Builderman Was Here*
 <Players> *What?*
@@ -10,3 +10,4 @@ Text: NOTICE WARNING! The hospital will be closing on 2nd april for upgrades ple
 Text.String <Coming Soon>
 FFlagEnableHDAdmin
 DisableAdonisLoader
+Text.String ("We are activly looking for any solutions to the performence issues)

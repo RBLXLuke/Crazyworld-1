@@ -10,4 +10,6 @@ Text: NOTICE WARNING! The hospital will be closing on 2nd april for upgrades ple
 Text.String <Coming Soon>
 FFlagEnableHDAdmin
 DisableAdonisLoader
-Text.String ("We are activly looking for any solutions to the performence issues)
+Text.String ("We are activly looking for any solutions to the performence issues")
+Text.String ("N/A")
+Text.String ("Crazyworld Notice")

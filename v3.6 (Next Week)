@@ -1,0 +1,12 @@
+Game  Version <v3.6>
+
+<NPC> Builderman Was Here*
+<Players> *What?*
+Hospital Closing For Upgrades <On April 2nd>
+
+
+Text: NOTICE WARNING! The hospital will be closing on 2nd april for upgrades please plan your issues urgently 
+
+Text.String <Coming Soon>
+FFlagEnableHDAdmin
+DisableAdonisLoader

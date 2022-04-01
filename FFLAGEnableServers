@@ -1,5 +1,0 @@
-{date} March 29th 16:00 Disable servers true
-if true then
-kick plr
-("Servers are down for Maintainence")
-print ("Successfully logged out user"

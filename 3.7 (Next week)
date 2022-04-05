@@ -1,5 +1,7 @@
 Text.String ("Demolation in progress standby")
-Npc.Text("Standback citizen")
+Npc.Text ("Standback citizen")
+Player.Text ("Whats happening?")
+Npc.Text ("We're taking this abandoned place to the ground")
 Text.String ("06/04/22")
 Text.String("Fixed some bugs")
 Text.String Double XP Week

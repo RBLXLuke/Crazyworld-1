@@ -4,7 +4,7 @@ Player.Text ("Whats happening?")
 Npc.Text ("We're taking this abandoned place to the ground")
 Text.String ("06/04/22")
 Text.String("Fixed some bugs")
-Text.String Double XP Week
+Text.String Double XP Week x2
 local Prize = 200
 Previous Prize = 100
 

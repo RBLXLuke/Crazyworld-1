@@ -1,5 +1,5 @@
 
-local PluginVersion = 0.4[Beta]
+local PluginVersion = 0.4.1
 local plugin = plugin
 local Api = require(script.Parent.Api)
 

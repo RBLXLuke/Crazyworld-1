@@ -12,3 +12,5 @@ SpecialItemUser("Aliens")
 SepcialItemNPC ("Access Granted")
 UIBLOX.Updatelogs("Update logs"
 UIBLOX.TXTLabl("N/A")
+UIBLOX.3D.TEXT("Police Station will be closed for maintainence")
+UIBLOX.3D.TEXT("Check back soon")

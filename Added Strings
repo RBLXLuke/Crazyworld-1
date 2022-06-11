@@ -7,3 +7,7 @@ EvilDuck.NPC("HAHA we just found ourselves a new target")
 String.3DTEXT("Crazyworld.inc)
 String.3DTEXT("Crazyworld.inc HQ)
 EvilDuck.NPC("Make him Shut up> 
+SpecialItem.("Password Required")
+SpecialItemNPC("Wrong)
+SpecialItemUser("Aliens")
+SepcialItemNPC ("Access Granted")

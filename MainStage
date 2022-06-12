@@ -1,6 +1,6 @@
 Experience Version 
 link: https://www.roblox.com/games/7546331071/Dev-Crazyworld
-Stage: False
-if true then
-publish place as
+Stage: True
+if True then
+predeploy place as
 link:https://www.roblox.com/games/5401000046/CrazyWorld

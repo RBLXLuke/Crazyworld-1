@@ -1,0 +1,3 @@
+local DataStore = game:GetService("DataStoreService")
+local ds = DataStore:GetDataStore("LeaderStatSave")
+--

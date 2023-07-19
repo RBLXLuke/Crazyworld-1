@@ -6,5 +6,7 @@
     "FlagEnableInGameMenuModernization": "False",
     "FFlagEnableInGameMenuModernizationBigText": "False",
     "FFlagEnableInGameMenuModernizationStickyBar": "False",
-    "FFlagEnableMenuModernizationABTest": "False"
+    "FFlagEnableMenuModernizationABTest": "False",
+    "DFFlagContentProviderFailureNewLogGroup": "False",
+    "FFlagCOLLAB2847SelectGroupForPublish1": "False"
 }

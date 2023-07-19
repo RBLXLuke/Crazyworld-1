@@ -1,2 +1,2 @@
-# Luke's FFLAG Tracker! 
-everytime i flip a fflag it will be posted in #Test
+#FastFlagTracker
+Everytime i add a FValuable  from a build in studio,cilent app i will commit and it will automaticly be posted in Github tracker 

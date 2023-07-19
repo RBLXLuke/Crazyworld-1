@@ -1,8 +1,7 @@
-
-0.585.100.58503406.1
+0.585.100.5850406
 
 Added Class PluginCapabilities : Instance
-	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}
+Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}
 
 Added Class RobloxServerStorage : Instance [NotCreatable] [Service] [NotReplicated]
 Added Class VRStatusService : Instance [NotCreatable] [Service]

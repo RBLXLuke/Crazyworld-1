@@ -1,3 +1,5 @@
 {
-    "FFlagEnableVRToggle": "True"
+    "FFlagEnableVRToggle": "True",
+    "FFlagDataModelPatchBackgroundLoad3": "True",
+    "FFlagSalvageOutdatedCompletions": "True"
 }

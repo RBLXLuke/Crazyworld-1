@@ -7,5 +7,12 @@
     "FFlagEnableInGameMenuModernizationStickyBar": "False",
     "FFlagEnableMenuModernizationABTest": "False",
     "DFFlagContentProviderFailureNewLogGroup": "False",
-    "FFlagCOLLAB2847SelectGroupForPublish1": "False"
+    "FFlagCOLLAB2847SelectGroupForPublish1": "False",
+    "DFIntEngineDatamodelAnalyticsInfoThrottle": "0",
+    "DFIntLocationRecordPeriod":"",
+    "DFIntLocationRecordSessionPercentHundredths":"",
+    "FFlagDebugAssetImportTemplatesIgnoreQSettings": "False",
+    "FFlagEnableLocationRecording":"False",
+    "FFlagMacClientSupportIME6": "False"
+    
 }

@@ -2,5 +2,9 @@
 {
     "FFlagEnableVRToggle": "True",
     "FFlagDataModelPatchBackgroundLoad3": "False",
-    "FFlagSalvageOutdatedCompletions": "False"
+    "FFlagSalvageOutdatedCompletions": "False",
+    "FlagEnableInGameMenuModernization": "False",
+    "FFlagEnableInGameMenuModernizationBigText": "False",
+    "FFlagEnableInGameMenuModernizationStickyBar": "False",
+    "FFlagEnableMenuModernizationABTest": "False"
 }

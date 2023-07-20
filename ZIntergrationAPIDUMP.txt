@@ -1,11 +1,10 @@
-0.587.100.5870006
+0.587.100.5870011
 
 Added Class PluginCapabilities : Instance
 	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}
 
 Added Class RobloxServerStorage : Instance [NotCreatable] [Service] [NotReplicated]
 Added Class VRStatusService : Instance [NotCreatable] [Service]
-
 Added Property bool PhysicsSettings.DisableCSGv3ForPlugins
 Added Property Enum.ViewMode RenderSettings.ViewMode
 Added Property bool RootImportData.RigVisualization
@@ -13,7 +12,7 @@ Added Property BinaryString ServiceVisibilityService.HiddenServices {RobloxSecur
 Added Property Enum.AvatarJointUpgrade StarterPlayer.AvatarJointUpgrade [NotBrowsable]
 Added Property Enum.DeathStyle StarterPlayer.DeathStyle [NotBrowsable]
 Added Property BubbleChatMessageProperties TextChatMessage.BubbleChatMessageProperties
-
+Property Enum.FluidForces Workspace.FluidForces [NotScriptable]
 Added Function Tuple AssetService:PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType assetType) [Yields]
 Added Function Vector2 CaptureService:GetCaptureSizeAsync(Content captureContentId) {RobloxScriptSecurity} [Yields]
 Added Function void DynamicImage:WritePixels(Vector2 position, Vector2 size, Array pixels) [CustomLuaState]
@@ -32,7 +31,7 @@ Added Function OpenCloudModel OpenCloudApiV1:CreateModel(string name) [CustomLua
 Added Function OpenCloudModel OpenCloudApiV1:CreateUserNotificationAsync(string user, OpenCloudModel userNotification) [Yields]
 Added Function int UGCValidationService:CalculateUniqueUVCount(string meshId) {RobloxScriptSecurity} [Yields]
 Added Function bool UGCValidationService:ValidateUniqueUVCount(string meshId, int numRequired) {RobloxScriptSecurity} [Yields]
-
+Added Function int UGCValidationService:CalculateUniqueUVCount(string meshId) {RobloxScriptSecurity} [Yields]
 Added Event AssetService.OpenCreateResultModal(Enum.PromptCreateAssetResult resultType) {RobloxScriptSecurity}
 Added Event CaptureService.CaptureSaved(Dictionary captureInfo) {RobloxScriptSecurity}
 Added Event MarketplaceService.PrepareCollectiblesPurchaseRequested(Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice) {RobloxScriptSecurity}
@@ -50,6 +49,11 @@ Added Enum DeathStyle
 	Added EnumItem DeathStyle.ClassicBreakApart : 1
 	Added EnumItem DeathStyle.NonGraphic : 2
 	Added EnumItem DeathStyle.Scriptable : 3
+
+Enum FluidForces
+	EnumItem FluidForces.Default : 0
+	EnumItem FluidForces.Experimental : 1
+
 
 Added Enum PromptCreateAssetResult
 	Added EnumItem PromptCreateAssetResult.Success : 1

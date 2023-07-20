@@ -9,3 +9,5 @@ https://twitter.com/LukePlayzzRBLX
  https://discord.gg/YMFAt5y74c
 
  Last Updated 20th July 2023
+
+ Roblox Current Version 0.586.0.5860000

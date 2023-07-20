@@ -1,4 +1,4 @@
-0.587.100.5870003 (hotfix)
+0.587.100.5870006
 
 Added Class PluginCapabilities : Instance
 	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}
@@ -30,6 +30,7 @@ Added Function void MarketplaceService:PrepareCollectiblesPurchase(Instance play
 Added Function void MarketplaceService:PromptCollectiblesPurchase(Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice) {RobloxScriptSecurity}
 Added Function OpenCloudModel OpenCloudApiV1:CreateModel(string name) [CustomLuaState]
 Added Function OpenCloudModel OpenCloudApiV1:CreateUserNotificationAsync(string user, OpenCloudModel userNotification) [Yields]
+Added Function int UGCValidationService:CalculateUniqueUVCount(string meshId) {RobloxScriptSecurity} [Yields]
 Added Function bool UGCValidationService:ValidateUniqueUVCount(string meshId, int numRequired) {RobloxScriptSecurity} [Yields]
 
 Added Event AssetService.OpenCreateResultModal(Enum.PromptCreateAssetResult resultType) {RobloxScriptSecurity}
@@ -122,3 +123,4 @@ Removed Enum AdPortalType
 	Removed EnumItem AdPortalType.Return
 
 Removed EnumItem AdTeleportMethod.PortalReturn
+

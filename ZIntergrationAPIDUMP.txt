@@ -1,3 +1,4 @@
+
 0.587.100.5870011
 
 Added Class PluginCapabilities : Instance
@@ -13,6 +14,7 @@ Added Property BinaryString ServiceVisibilityService.HiddenServices {RobloxSecur
 Added Property Enum.AvatarJointUpgrade StarterPlayer.AvatarJointUpgrade [NotBrowsable]
 Added Property Enum.DeathStyle StarterPlayer.DeathStyle [NotBrowsable]
 Added Property BubbleChatMessageProperties TextChatMessage.BubbleChatMessageProperties
+Added Property Enum.FluidForces Workspace.FluidForces [NotScriptable]
 
 Added Function Tuple AssetService:PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType assetType) [Yields]
 Added Function Vector2 CaptureService:GetCaptureSizeAsync(Content captureContentId) {RobloxScriptSecurity} [Yields]
@@ -50,6 +52,10 @@ Added Enum DeathStyle
 	Added EnumItem DeathStyle.ClassicBreakApart : 1
 	Added EnumItem DeathStyle.NonGraphic : 2
 	Added EnumItem DeathStyle.Scriptable : 3
+
+Added Enum FluidForces
+	Added EnumItem FluidForces.Default : 0
+	Added EnumItem FluidForces.Experimental : 1
 
 Added Enum PromptCreateAssetResult
 	Added EnumItem PromptCreateAssetResult.Success : 1
@@ -111,6 +117,7 @@ Removed Class TextureGuiExperimental
 
 Removed Property AdPortal.PortalType
 Removed Property Studio.Show QT warnings in output
+Removed Property Workspace.EnableFluidForces
 
 Removed Function AssetService:PromptPublishAssetAsync
 Removed Function DynamicMesh:Clear
@@ -123,4 +130,3 @@ Removed Enum AdPortalType
 	Removed EnumItem AdPortalType.Return
 
 Removed EnumItem AdTeleportMethod.PortalReturn
-

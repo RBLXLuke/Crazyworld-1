@@ -1,5 +1,5 @@
 
-0.587.100.5870011
+0.587.100.5870017
 
 Added Class PluginCapabilities : Instance
 	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}

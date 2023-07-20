@@ -9,10 +9,9 @@
     "DFFlagContentProviderFailureNewLogGroup": "False",
     "FFlagCOLLAB2847SelectGroupForPublish1": "False",
     "DFIntEngineDatamodelAnalyticsInfoThrottle": "0",
-    "DFIntLocationRecordPeriod":"",
-    "DFIntLocationRecordSessionPercentHundredths":"",
+    "DFIntLocationRecordPeriod":"10000",
+    "DFIntLocationRecordSessionPercentHundredths":"0",
     "FFlagDebugAssetImportTemplatesIgnoreQSettings": "False",
-    "FFlagEnableLocationRecording":"False",
-    "FFlagMacClientSupportIME6": "False"
+    "FFlagEnableLocationRecording":"False"
     
 }

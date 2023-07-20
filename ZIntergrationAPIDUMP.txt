@@ -71,6 +71,11 @@ Added Enum ViewMode
 	Added EnumItem ViewMode.Transparent : 2
 	Added EnumItem ViewMode.Decal : 3
 
+Added Tag [Deprecated] to Function MarketplaceService:IsPlayerSubscribed
+Added Tag [Deprecated] to Function MarketplaceService:PromptSubscriptionCancellation
+Added Tag [Deprecated] to Function MarketplaceService:PromptSubscriptionPurchase
+Added Tag [Deprecated] to Event MarketplaceService.PromptSubscriptionCancellationFinished
+Added Tag [Deprecated] to Event MarketplaceService.PromptSubscriptionPurchaseFinished
 Added Tag [Hidden] to Property VoiceChatService.UseNewJoinFlow
 
 Changed the superclass and memory category of Class DynamicMesh 

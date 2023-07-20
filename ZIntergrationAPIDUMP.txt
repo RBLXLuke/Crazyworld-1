@@ -1,4 +1,4 @@
-0.587.100.5870001
+0.587.100.5870001 (hotfix)
 Added Class PluginCapabilities : Instance
 	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}
 

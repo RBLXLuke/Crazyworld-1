@@ -7,12 +7,12 @@
     "FFlagEnableInGameMenuModernizationStickyBar": "False",
     "FFlagEnableMenuModernizationABTest": "False",
     "DFFlagContentProviderFailureNewLogGroup": "False",
-    "FFlagCOLLAB2847SelectGroupForPublish1": "False",
     "DFIntEngineDatamodelAnalyticsInfoThrottle": "0",
     "DFIntLocationRecordPeriod":"10000",
     "DFIntLocationRecordSessionPercentHundredths":"0",
     "FFlagDebugAssetImportTemplatesIgnoreQSettings": "False",
     "FFlagEnableLocationRecording":"False",
-    "UGCBodiesAndHeadsBetaFeature": "False"
+    "UGCBodiesAndHeadsBetaFeature": "False",
+    "FFlagCOLLAB2847SelectGroupForPublish2": "False"
     
 }

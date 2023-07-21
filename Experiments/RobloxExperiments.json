@@ -13,6 +13,7 @@
     "FFlagDebugAssetImportTemplatesIgnoreQSettings": "False",
     "FFlagEnableLocationRecording":"False",
     "UGCBodiesAndHeadsBetaFeature": "False",
-    "FFlagCOLLAB2847SelectGroupForPublish1": "False"
+    "FFlagCOLLAB2847SelectGroupForPublish1": "False",
+    "FStringDebugShowFlagState":""
     
 }

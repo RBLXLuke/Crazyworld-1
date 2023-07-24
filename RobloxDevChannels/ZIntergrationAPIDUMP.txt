@@ -1,6 +1,112 @@
-0.588.100.5880110 (No changes were made to API DUMP2)
+0.588.100.5880129 
+
+Added Class AudioAnalyzer : Instance [NotBrowsable]
+	Added Property float AudioAnalyzer.PeakLevel [ReadOnly]
+	Added Property float AudioAnalyzer.RmsLevel [ReadOnly]
+	Added Function Array AudioAnalyzer:GetSpectrum() [CustomLuaState]
+
+Added Class AudioChorus : Instance [NotBrowsable]
+	Added Property float AudioChorus.Depth
+	Added Property float AudioChorus.Mix
+	Added Property float AudioChorus.Rate
+
+Added Class AudioCompressor : Instance [NotBrowsable]
+	Added Property float AudioCompressor.Attack
+	Added Property float AudioCompressor.MakeupGain
+	Added Property float AudioCompressor.Ratio
+	Added Property float AudioCompressor.Release
+	Added Property float AudioCompressor.Threshold
+
+Added Class AudioDeviceInput : Instance [NotBrowsable]
+	Added Property Enum.AccessModifierType AudioDeviceInput.AccessType
+	Added Property bool AudioDeviceInput.Active {✏️RobloxScriptSecurity}
+	Added Property bool AudioDeviceInput.IsReady {RobloxScriptSecurity} [ReadOnly]
+	Added Property bool AudioDeviceInput.Muted
+	Added Property Player AudioDeviceInput.Player
+	Added Property BinaryString AudioDeviceInput.AccessList {RobloxSecurity} [Hidden] [NotScriptable]
+	Added Function Array AudioDeviceInput:GetUserIdAccessList()
+	Added Function void AudioDeviceInput:SetUserIdAccessList(Array userIds)
+
+Added Class AudioDeviceOutput : Instance [NotBrowsable]
+	Added Property Player AudioDeviceOutput.Player
+
+Added Class AudioDistortion : Instance [NotBrowsable]
+	Added Property float AudioDistortion.Level
+
+Added Class AudioEcho : Instance [NotBrowsable]
+	Added Property float AudioEcho.DelayTime
+	Added Property float AudioEcho.DryLevel
+	Added Property float AudioEcho.Feedback
+	Added Property float AudioEcho.WetLevel
+
+Added Class AudioEmitter : Instance [NotBrowsable]
+	Added Property string AudioEmitter.AudioInteractionGroup
+
+Added Class AudioEqualizer : Instance [NotBrowsable]
+	Added Property float AudioEqualizer.HighGain
+	Added Property float AudioEqualizer.LowGain
+	Added Property float AudioEqualizer.MidGain
+	Added Property NumberRange AudioEqualizer.MidRange
+
+Added Class AudioFader : Instance [NotBrowsable]
+	Added Property float AudioFader.Volume
+
+Added Class AudioFlanger : Instance [NotBrowsable]
+	Added Property float AudioFlanger.Depth
+	Added Property float AudioFlanger.Mix
+	Added Property float AudioFlanger.Rate
+
+Added Class AudioListener : Instance [NotBrowsable]
+	Added Property string AudioListener.AudioInteractionGroup
+
+Added Class AudioPitchShifter : Instance [NotBrowsable]
+	Added Property float AudioPitchShifter.Pitch
+
+Added Class AudioPlayer : Instance [NotBrowsable]
+	Added Property string AudioPlayer.AssetId
+	Added Property bool AudioPlayer.AutoLoad
+	Added Property bool AudioPlayer.IsPlaying {✏️RobloxSecurity}
+	Added Property bool AudioPlayer.IsReady [ReadOnly]
+	Added Property NumberRange AudioPlayer.LoopRegion
+	Added Property bool AudioPlayer.Looping
+	Added Property NumberRange AudioPlayer.PlaybackRegion
+	Added Property float AudioPlayer.PlaybackSpeed
+	Added Property float AudioPlayer.TimeLength [ReadOnly]
+	Added Property float AudioPlayer.TimePosition
+	Added Function void AudioPlayer:Play()
+	Added Function void AudioPlayer:Stop()
+
+Added Class AudioReverb : Instance [NotBrowsable]
+	Added Property float AudioReverb.DecayRatio
+	Added Property float AudioReverb.DecayTime
+	Added Property float AudioReverb.Density
+	Added Property float AudioReverb.Diffusion
+	Added Property float AudioReverb.DryLevel
+	Added Property float AudioReverb.EarlyDelayTime
+	Added Property float AudioReverb.HighCutFrequency
+	Added Property float AudioReverb.LateDelayTime
+	Added Property float AudioReverb.LowShelfFrequency
+	Added Property float AudioReverb.LowShelfGain
+	Added Property float AudioReverb.ReferenceFrequency
+	Added Property float AudioReverb.WetLevel
+
+Added Class Wire : Instance [NotBrowsable]
+	Added Property bool Wire.Connected [ReadOnly]
+	Added Property Instance Wire.SourceInstance
+	Added Property string Wire.SourceName
+	Added Property Instance Wire.TargetInstance
+	Added Property string Wire.TargetName
 
 Added Property Vector3 AlignOrientation.LookAtPosition [NotReplicated]
+
+Added Enum AccessModifierType
+	Added EnumItem AccessModifierType.Allow : 0
+	Added EnumItem AccessModifierType.Deny : 1
+
+Added Enum AudioWindowSize
+	Added EnumItem AudioWindowSize.Small : 0
+	Added EnumItem AudioWindowSize.Medium : 1
+	Added EnumItem AudioWindowSize.Large : 2
 
 Changed the parameters of Function MarketplaceService:PrepareCollectiblesPurchase 
 	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)

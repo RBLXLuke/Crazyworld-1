@@ -1,5 +1,4 @@
 0.587.0.5870056
-"No Changes Were made in this version"
 
 Added Class PluginCapabilities : Instance
 	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}

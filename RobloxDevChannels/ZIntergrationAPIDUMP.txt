@@ -1,138 +1,19 @@
-0.588.100.5880097
-
-Added Class PluginCapabilities : Instance
-	Added Property string PluginCapabilities.Manifest {RobloxScriptSecurity}
-
-Added Class RobloxServerStorage : Instance [NotCreatable] [Service] [NotReplicated]
-Added Class VRStatusService : Instance [NotCreatable] [Service]
+0.588.100.5880104
 
 Added Property Vector3 AlignOrientation.LookAtPosition [NotReplicated]
-Added Property bool PhysicsSettings.DisableCSGv3ForPlugins
-Added Property Enum.ViewMode RenderSettings.ViewMode
-Added Property bool RootImportData.RigVisualization
-Added Property BinaryString ServiceVisibilityService.HiddenServices {RobloxSecurity}
-Added Property Enum.AvatarJointUpgrade StarterPlayer.AvatarJointUpgrade [NotBrowsable]
-Added Property Enum.DeathStyle StarterPlayer.DeathStyle [NotBrowsable]
-Added Property BubbleChatMessageProperties TextChatMessage.BubbleChatMessageProperties
-Added Property Enum.FluidForces Workspace.FluidForces [NotScriptable]
 
-Added Function Tuple AssetService:PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType assetType) [Yields]
-Added Function Vector2 CaptureService:GetCaptureSizeAsync(Content captureContentId) {RobloxScriptSecurity} [Yields]
-Added Function void DynamicImage:WritePixels(Vector2 position, Vector2 size, Array pixels) [CustomLuaState]
-Added Function Tuple DynamicMesh:FindClosestPointOnSurface(Vector3 point)
-Added Function int DynamicMesh:FindClosestVertex(Vector3 toThisPoint)
-Added Function Array DynamicMesh:FindVerticesWithinSphere(Vector3 center, float radius)
-Added Function Array DynamicMesh:GetAdjacentTriangles(int triangleId)
-Added Function Array DynamicMesh:GetAdjacentVertices(int vertexId)
-Added Function Tuple DynamicMesh:Raycast(Vector3 origin, Vector3 direction)
-Added Function void DynamicMesh:RemoveVertex(int vertexId)
-Added Function void GuiService:ToggleGuiIsVisibleForCaptures(Enum.GuiType guiType) {RobloxScriptSecurity}
-Added Function Dictionary MarketplaceService:PerformPurchaseV2(Enum.InfoType infoType, int64 productId, int expectedPrice, string requestId, bool isRobloxPurchase, Dictionary collectiblesProductDetails) {RobloxScriptSecurity} [Yields]
-Added Function void MarketplaceService:PrepareCollectiblesPurchase(Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice) {RobloxScriptSecurity}
-Added Function void MarketplaceService:PromptCollectiblesPurchase(Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice) {RobloxScriptSecurity}
-Added Function OpenCloudModel OpenCloudApiV1:CreateModel(string name) [CustomLuaState]
-Added Function OpenCloudModel OpenCloudApiV1:CreateUserNotificationAsync(string user, OpenCloudModel userNotification) [Yields]
-Added Function int UGCValidationService:CalculateUniqueUVCount(string meshId) {RobloxScriptSecurity} [Yields]
-Added Function bool UGCValidationService:ValidateUniqueUVCount(string meshId, int numRequired) {RobloxScriptSecurity} [Yields]
+Changed the parameters of Function MarketplaceService:PrepareCollectiblesPurchase 
+	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
+	  to: (Instance player, int64 assetId, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
 
-Added Event AssetService.OpenCreateResultModal(Enum.PromptCreateAssetResult resultType) {RobloxScriptSecurity}
-Added Event CaptureService.CaptureSaved(Dictionary captureInfo) {RobloxScriptSecurity}
-Added Event MarketplaceService.PrepareCollectiblesPurchaseRequested(Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice) {RobloxScriptSecurity}
-Added Event MarketplaceService.PromptCollectiblesPurchaseRequested(Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice, string idempotencyKey, string purchaseAuthToken) {RobloxScriptSecurity}
+Changed the parameters of Function MarketplaceService:PromptCollectiblesPurchase 
+	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
+	  to: (Instance player, int64 assetId, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
 
-Added Callback Tuple TextChatService.OnBubbleAdded(TextChatMessage message, Instance adornee)
+Changed the parameters of Event MarketplaceService.PrepareCollectiblesPurchaseRequested 
+	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
+	  to: (Instance player, int64 assetId, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
 
-Added Enum AvatarJointUpgrade
-	Added EnumItem AvatarJointUpgrade.Default : 0
-	Added EnumItem AvatarJointUpgrade.Enabled : 1
-	Added EnumItem AvatarJointUpgrade.Disabled : 2
-
-Added Enum DeathStyle
-	Added EnumItem DeathStyle.Default : 0
-	Added EnumItem DeathStyle.ClassicBreakApart : 1
-	Added EnumItem DeathStyle.NonGraphic : 2
-	Added EnumItem DeathStyle.Scriptable : 3
-
-Added Enum FluidForces
-	Added EnumItem FluidForces.Default : 0
-	Added EnumItem FluidForces.Experimental : 1
-
-Added Enum PromptCreateAssetResult
-	Added EnumItem PromptCreateAssetResult.Success : 1
-	Added EnumItem PromptCreateAssetResult.PermissionDenied : 2
-	Added EnumItem PromptCreateAssetResult.Timeout : 3
-	Added EnumItem PromptCreateAssetResult.UploadFailed : 4
-	Added EnumItem PromptCreateAssetResult.NoUserInput : 5
-	Added EnumItem PromptCreateAssetResult.UnknownFailure : 6
-
-Added Enum ViewMode
-	Added EnumItem ViewMode.None : 0
-	Added EnumItem ViewMode.GeometryComplexity : 1
-	Added EnumItem ViewMode.Transparent : 2
-	Added EnumItem ViewMode.Decal : 3
-
-Added Tag [Deprecated] to Function MarketplaceService:IsPlayerSubscribed
-Added Tag [Deprecated] to Function MarketplaceService:PromptSubscriptionCancellation
-Added Tag [Deprecated] to Function MarketplaceService:PromptSubscriptionPurchase
-Added Tag [Deprecated] to Event MarketplaceService.PromptSubscriptionCancellationFinished
-Added Tag [Deprecated] to Event MarketplaceService.PromptSubscriptionPurchaseFinished
-Added Tag [Hidden] to Property VoiceChatService.UseNewJoinFlow
-
-Changed the superclass and memory category of Class DynamicMesh 
-	from: "FileMesh" "PhysicsParts"
-	  to: "DataModelMesh" "Instances"
-
-Changed the category of Property StyleDerive.StyleSheet 
-	from: "Appearance"
-	  to: "Data"
-
-Changed the category of Property StyleLink.StyleSheet 
-	from: "Appearance"
-	  to: "Data"
-
-Changed the read permissions of Property MaterialVariant.BaseMaterial 
-	from: {PluginSecurity}
-	  to: {None}
-
-Changed the serialization of Property MetaBreakpoint.RemoveOnHit 
-	from: [<🕒> RuntimeOnly]
-	  to: [<💾|📁> Saves|Loads]
-
-Changed the serialization of Property VoiceChatService.UseNewJoinFlow 
-	from: [<💾|📁> Saves|Loads]
-	  to: [<🕒> RuntimeOnly]
-
-Changed the parameters of Function PublishService:CreateAssetAndWaitForAssetId 
-	from: (Instance instance, string operationId, int64 creatorId, string assetType, string name, string description)
-	  to: (Objects instances, string operationId, int64 creatorId, string assetType, string name, string description)
-
-Changed the parameters of Event AdService.PortalPrompt 
-	from: (int64 destinationId, Player player, Instance portal)
-	  to: (int64 destinationId, Instance portal, bool requiresNoButton)
-
-Changed the parameters of Event TextChatService.BubbleDisplayed 
-	from: (Instance part, string message)
-	  to: (Instance partOrCharacter, TextChatMessage textChatMessage)
-
-Changed the value of EnumItem AdTeleportMethod.InGameMenuBackButton from 3 to 2
-Changed the value of EnumItem AdTeleportMethod.UIBackButton from 4 to 3
-
-Removed Class TextureGuiExperimental
-	Removed Property TextureGuiExperimental.Size
-
-Removed Property AdPortal.PortalType
-Removed Property Studio.Show QT warnings in output
-Removed Property Workspace.EnableFluidForces
-
-Removed Function AssetService:PromptPublishAssetAsync
-Removed Function DynamicMesh:Clear
-
-Removed Event ThirdPartyUserService.ActiveGamepadAdded
-Removed Event ThirdPartyUserService.ActiveGamepadRemoved
-
-Removed Enum AdPortalType
-	Removed EnumItem AdPortalType.Forward
-	Removed EnumItem AdPortalType.Return
-
-Removed EnumItem AdTeleportMethod.PortalReturn
-
+Changed the parameters of Event MarketplaceService.PromptCollectiblesPurchaseRequested 
+	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice, string idempotencyKey, string purchaseAuthToken)
+	  to: (Instance player, int64 assetId, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice, string idempotencyKey, string purchaseAuthToken)

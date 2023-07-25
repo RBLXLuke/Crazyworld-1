@@ -20,7 +20,7 @@ https://twitter.com/LukePlayzzRBLX
  https://discord.gg/YMFAt5y74c
 
 ___________________________________________
- Roblox Current Version 0.586.0.5860000 (5e95560f5adf4cd0)
+ Roblox Current Version 0.587.0.5870056
 _________________________________________
 
 you can also track deployments here https://discord.gg/latte-softworks-892211155303538748

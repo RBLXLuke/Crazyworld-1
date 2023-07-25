@@ -3,8 +3,9 @@ Everytime i add a FValuable  from a build in studio,cilent app i will commit and
 
 Dev channels (ℹ️)
 zIntegration gets Updated Constantly Throughout the day (Weekends Included)
-ZCanary Every week before deployment
+ZLIVE(PRE-ACTIVE) Every week before Deploying to ZLIVE
 ZLIVE Every week with Deployment to all Cilents Windows, mac, iOS, Android, Xbox , PlayStation 
+ZCanary Every week before published to ZLIVE (PRE-ACTIVE)
 ______________________________________________________________________________________________
 
 Thanks to https://github.com/MaximumADHD/Roblox-Client-Tracker/commits/zIntegration For information about latest Roblox

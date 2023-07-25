@@ -1,4 +1,4 @@
-0.588.100.5880129 
+0.588.100.5880179
 
 Added Class AudioAnalyzer : Instance [NotBrowsable]
 	Added Property float AudioAnalyzer.PeakLevel [ReadOnly]
@@ -98,6 +98,14 @@ Added Class Wire : Instance [NotBrowsable]
 	Added Property string Wire.TargetName
 
 Added Property Vector3 AlignOrientation.LookAtPosition [NotReplicated]
+Added Property string MaterialService.CardboardName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.CarpetName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.CeramicTilesName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.ClayRoofTilesName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.LeatherName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.PlasterName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.RoofShinglesName {RobloxSecurity} [NotScriptable]
+Added Property string MaterialService.RubberName {RobloxSecurity} [NotScriptable]
 
 Added Enum AccessModifierType
 	Added EnumItem AccessModifierType.Allow : 0
@@ -107,6 +115,15 @@ Added Enum AudioWindowSize
 	Added EnumItem AudioWindowSize.Small : 0
 	Added EnumItem AudioWindowSize.Medium : 1
 	Added EnumItem AudioWindowSize.Large : 2
+
+Added EnumItem Material.Cardboard : 2304
+Added EnumItem Material.Carpet : 2305
+Added EnumItem Material.CeramicTiles : 2306
+Added EnumItem Material.ClayRoofTiles : 2307
+Added EnumItem Material.RoofShingles : 2308
+Added EnumItem Material.Leather : 2309
+Added EnumItem Material.Plaster : 2310
+Added EnumItem Material.Rubber : 2311
 
 Changed the parameters of Function MarketplaceService:PrepareCollectiblesPurchase 
 	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice)
@@ -123,3 +140,4 @@ Changed the parameters of Event MarketplaceService.PrepareCollectiblesPurchaseRe
 Changed the parameters of Event MarketplaceService.PromptCollectiblesPurchaseRequested 
 	from: (Instance player, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice, string idempotencyKey, string purchaseAuthToken)
 	  to: (Instance player, int64 assetId, string collectibleItemId, string collectibleItemInstanceId, string collectibleProductId, int expectedPrice, string idempotencyKey, string purchaseAuthToken)
+

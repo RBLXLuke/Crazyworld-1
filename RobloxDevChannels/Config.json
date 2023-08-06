@@ -1,0 +1,22 @@
+{
+	"Workers": 5,
+	"ClientApplications": [
+		"AndroidApp",
+		"MacDesktopClient",
+		"MacStudioApp",
+		"PCDesktopClient",
+		"PCStudioApp",
+		"UWPApp",
+		"XboxClient",
+		"iOSApp"
+	],
+	"BootstrapperApplications": [
+		"MacClientBootstrapper",
+		"MacStudioBootstrapper",
+		"PCClientBootstrapper",
+		"PCStudioBootstrapper"
+	],
+	"OtherApplications": [
+		"CreatorDashboard"
+	]
+}

@@ -1,19 +1,19 @@
-name: RTC Tracker Flags Run
+name: "RTC Tracker Flags Run"
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: "*/10 * * * *"
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     env:
       RTC_FLAGS_TOKEN:  ${{ secrets.RTC_FLAGS_TOKEN }}
       RTC_FLAGS_USER:  ${{ secrets.RTC_FLAGS_USER }}
     steps:
-      - name:  Fetch RCT-Tracker-Flags-Linux.zip
-        run:   curl -L -s -o "#1" https://github.com/Roblox-Tracking-Central-Backend/Flags/releases/latest/download/{RTC-Tracker-Flags-Linux.zip}
+      - name:  "Fetch RCT-Tracker-Flags-Linux.zip"
+        run:   "curl -L -s -o "#1" https://github.com/Roblox-Tracking-Central-Backend/Flags/releases/latest/download/{RTC-Tracker-Flags-Linux.zip}""
         shell: bash
 
       - name:  Extract RTC-Tracker-Flags-Linux.zip

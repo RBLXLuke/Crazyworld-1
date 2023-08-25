@@ -1,6 +1,7 @@
 Added Class DataStoreGetOptions : Instance [NotReplicated]
 	Added Property bool DataStoreGetOptions.UseCache
 
+Added Property BinaryString AnimationRigData.rootMotion [Hidden] [NotScriptable]
 Added Property bool LinearVelocity.ForceLimitsEnabled
 Added Property int Studio.LargeFileLineCountThreshold {RobloxScriptSecurity}
 Added Property int Studio.LargeFileThreshold {RobloxScriptSecurity}

@@ -14,6 +14,7 @@ Added Property float VRService.QuestDisplayRefreshRate {RobloxScriptSecurity} [H
 Added Property bool VRService.ThirdPersonFollowCamEnabled [ReadOnly]
 
 Added Function ClipEvaluator AnimationClipProvider:GetClipEvaluatorAsync(Content assetId) [Yields]
+Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
 Added Function void ChatbotUIService:DisplayContent(string contentType, Dictionary data) {RobloxScriptSecurity}
 Added Function Vector2 GuiService:GetHardwareSafeViewport() {RobloxScriptSecurity}
 Added Function Tuple ScriptEditorService:EditSourceAsyncWithRanges(LuaSourceContainer script, string newText, int startLine, int startCharacter, int endLine, int endCharacter) {RobloxScriptSecurity} [Yields]
@@ -310,6 +311,8 @@ Removed Property Studio.Render Throttle Percentage
 
 Removed Function ChatbotUIService:DisplayCommand
 Removed Function DynamicImage:Clear
+Removed Function DynamicMesh:InitializeFromMeshIdAsync
+Removed Function DynamicMesh:InitializeFromMeshPartAsync
 
 Removed EnumItem CollaboratorStatus.0
 Removed EnumItem CollaboratorStatus.1

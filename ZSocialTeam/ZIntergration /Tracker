@@ -1,4 +1,4 @@
-dded Class DataStoreGetOptions : Instance [NotReplicated]
+Added Class DataStoreGetOptions : Instance [NotReplicated]
 	Added Property bool DataStoreGetOptions.UseCache
 
 Added Property bool LinearVelocity.ForceLimitsEnabled

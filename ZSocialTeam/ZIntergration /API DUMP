@@ -18,6 +18,7 @@ Added Function ClipEvaluator AnimationClipProvider:GetClipEvaluatorAsync(Content
 Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
 Added Function void ChatbotUIService:DisplayContent(string contentType, Dictionary data) {RobloxScriptSecurity}
 Added Function Vector2 GuiService:GetHardwareSafeViewport() {RobloxScriptSecurity}
+Added Function void Player:SetBlockListInitialized() {RobloxScriptSecurity}
 Added Function Tuple ScriptEditorService:EditSourceAsyncWithRanges(LuaSourceContainer script, string newText, int startLine, int startCharacter, int endLine, int endCharacter) {RobloxScriptSecurity} [Yields]
 Added Function Tuple ScriptEditorService:UpdateSourceAsync(LuaSourceContainer script, Function callback) {PluginSecurity} [Yields]
 Added Function bool UGCValidationService:ValidateCageUVTriangleArea(string meshId) {RobloxScriptSecurity} [Yields]

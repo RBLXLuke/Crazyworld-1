@@ -1,0 +1,78 @@
+Added Class MemoryStoreHashMap : Instance [NotCreatable] [NotReplicated]
+	Added Function Variant MemoryStoreHashMap:GetAsync(string key) [Yields]
+	Added Function void MemoryStoreHashMap:RemoveAsync(string key) [Yields]
+	Added Function bool MemoryStoreHashMap:SetAsync(string key, Variant value, int64 expiration) [Yields]
+	Added Function Variant MemoryStoreHashMap:UpdateAsync(string key, Function transformFunction, int64 expiration) [Yields]
+
+Added Property Rect GuiService.TopbarInset [Hidden] [ReadOnly]
+Added Property SecurityCapabilities Instance.Capabilities {RobloxSecurity} [Hidden] [NotScriptable]
+Added Property bool Instance.DefinesCapabilities {RobloxSecurity} [Hidden] [NotScriptable]
+Added Property Enum.SolverConvergenceMetricType PhysicsSettings.SolverConvergenceMetricType {RobloxScriptSecurity}
+Added Property bool Studio.CameraAdaptiveSpeed {RobloxScriptSecurity}
+Added Property bool Studio.CameraTweenFocus {RobloxScriptSecurity}
+
+Added Function void Animator:RegisterEvaluationParallelCallback(Function callback)
+Added Function DynamicImage AssetService:CreateDynamicImageAsync(Content textureId) [Yields]
+Added Function void DynamicImage:Crop(Vector2 min, Vector2 max)
+Added Function void DynamicImage:DrawImage(Vector2 position, DynamicImage image, Enum.ImageCombineType combineType)
+Added Function Instance ExperienceNotificationService:CreateUserNotificationAsync(string userId, UserNotification userNotification) [Yields]
+Added Function MemoryStoreHashMap MemoryStoreService:GetHashMap(string name)
+Added Function Instance StreamingService:GetInstance(string collectorName, string requestId = "instanceId") {RobloxScriptSecurity}
+Added Function void StreamingService:RegisterContextCollector(string collectorName, Function function = nil) {RobloxScriptSecurity}
+Added Function void StreamingService:UnregisterContextCollector(string collectorName) {RobloxScriptSecurity}
+Added Function bool TeamCreateService:GetIsUseUniverseSearchNewEndpoint() {RobloxScriptSecurity}
+
+Added Event StreamingService.RequestEnded(string requestId) {RobloxScriptSecurity}
+Added Event StreamingService.RequestError(string requestId, string errorMessage) {RobloxScriptSecurity}
+Added Event StreamingService.RequestStarted(string requestId) {RobloxScriptSecurity}
+Added Event StreamingService.Stream(string requestId, string streamContent) {RobloxScriptSecurity}
+Added Event StyleRule.StyleRulePropertyChanged(string styleProperty) {RobloxScriptSecurity}
+Added Event VersionControlService.BroadcastScriptChangesSubmitted(string scriptGuid) {RobloxSecurity} [Hidden]
+
+Added Enum AssetCreatorType
+	Added EnumItem AssetCreatorType.User : 0
+	Added EnumItem AssetCreatorType.Group : 1
+
+Added Enum ImageCombineType
+	Added EnumItem ImageCombineType.BlendSourceOver : 1
+	Added EnumItem ImageCombineType.Overwrite : 2
+
+Added Enum SolverConvergenceMetricType
+	Added EnumItem SolverConvergenceMetricType.IterationBased : 0
+	Added EnumItem SolverConvergenceMetricType.AlgorithmAgnostic : 1
+
+Changed the parameters of Function GeometryService:CalculateConstraintsToPreserve 
+	from: (Instance source, Objects destination, Variant options)
+	  to: (Instance source, Objects destination, Dictionary options = nil)
+
+Changed the parameters of Function GeometryService:IntersectAsync 
+	from: (Instance part, Objects parts, Variant options)
+	  to: (Instance part, Objects parts, Dictionary options = nil)
+
+Changed the parameters of Function GeometryService:SubtractAsync 
+	from: (Instance part, Objects parts, Variant options)
+	  to: (Instance part, Objects parts, Dictionary options = nil)
+
+Changed the parameters of Function GeometryService:UnionAsync 
+	from: (Instance part, Objects parts, Variant options)
+	  to: (Instance part, Objects parts, Dictionary options = nil)
+
+Changed the parameters of Function GuiService:SetTopbarInset 
+	from: (Dictionary topbarInset)
+	  to: (Rect topbarInset)
+
+Changed the parameters of Function PublishService:CreateAssetAndWaitForAssetId 
+	from: (Objects instances, string operationId, int64 creatorId, string assetType, string name, string description)
+	  to: (Objects instances, string operationId, Enum.AssetCreatorType creatorType, int64 creatorId, string assetType, string name, string description)
+
+Changed the parameters of Event LiveScriptingService.KickFromEdit 
+	from: (int64 id)
+	  to: (int64 id, string msg)
+
+Moved Property AeroMeshData
+	from: Class MeshPart
+	  to: Class TriangleMeshPart
+
+Removed Function AssetService:LoadImageAsync
+
+Removed Event GuiService.TopbarInsetChanged

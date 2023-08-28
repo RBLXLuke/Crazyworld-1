@@ -1,0 +1,328 @@
+Win64.RobloxPlayerBeta.exe 0.593.100.5930173
+Mac.RobloxPlayerBeta.exe 0.593.100.5930173
+
+Added Class DataStoreGetOptions : Instance [NotReplicated]
+	Added Property bool DataStoreGetOptions.UseCache
+
+Added Property BinaryString AnimationRigData.rootMotion [Hidden] [NotScriptable]
+Added Property bool LinearVelocity.ForceLimitsEnabled
+Added Property int Studio.LargeFileLineCountThreshold {RobloxScriptSecurity}
+Added Property int Studio.LargeFileThreshold {RobloxScriptSecurity}
+Added Property Enum.VRComfortSetting UserGameSettings.VRComfortSetting {RobloxScriptSecurity} [Hidden] [NotReplicated]
+Added Property bool UserGameSettings.VRSmoothRotationEnabledCustomOption {RobloxScriptSecurity} [Hidden] [NotReplicated]
+Added Property bool UserGameSettings.VRThirdPersonFollowCamEnabled {RobloxScriptSecurity} [Hidden] [NotReplicated]
+Added Property bool UserGameSettings.VRThirdPersonFollowCamEnabledCustomOption {RobloxScriptSecurity} [Hidden] [NotReplicated]
+Added Property bool UserGameSettings.VignetteEnabledCustomOption {RobloxScriptSecurity} [Hidden] [NotReplicated]
+Added Property bool VRService.QuestASWState {RobloxScriptSecurity} [Hidden]
+Added Property float VRService.QuestDisplayRefreshRate {RobloxScriptSecurity} [Hidden]
+Added Property bool VRService.ThirdPersonFollowCamEnabled [ReadOnly]
+
+Added Function ClipEvaluator AnimationClipProvider:GetClipEvaluatorAsync(Content assetId) [Yields]
+Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
+Added Function void ChatbotUIService:DisplayContent(string contentType, Dictionary data) {RobloxScriptSecurity}
+Added Function Vector2 GuiService:GetHardwareSafeViewport() {RobloxScriptSecurity}
+Added Function void Player:SetBlockListInitialized() {RobloxScriptSecurity}
+Added Function Tuple ScriptEditorService:EditSourceAsyncWithRanges(LuaSourceContainer script, string newText, int startLine, int startCharacter, int endLine, int endCharacter) {RobloxScriptSecurity} [Yields]
+Added Function Tuple ScriptEditorService:UpdateSourceAsync(LuaSourceContainer script, Function callback) {PluginSecurity} [Yields]
+Added Function bool UGCValidationService:ValidateCageUVTriangleArea(string meshId) {RobloxScriptSecurity} [Yields]
+
+Added Event LiveScriptingService.SendAtomicOperation(int requestId, string guid, string op, string hash) {RobloxSecurity} [Hidden]
+Added Event LiveScriptingService.SendAtomicUpdateResponse(int guid, Enum.LiveEditingAtomicUpdateResponse response) {RobloxSecurity} [Hidden]
+
+Added Enum LiveEditingAtomicUpdateResponse
+	Added EnumItem LiveEditingAtomicUpdateResponse.Success : 0
+	Added EnumItem LiveEditingAtomicUpdateResponse.FailureGuidNotFound : 1
+	Added EnumItem LiveEditingAtomicUpdateResponse.FailureHashMismatch : 2
+	Added EnumItem LiveEditingAtomicUpdateResponse.FailureOperationIllegal : 3
+
+Added Enum VRComfortSetting
+	Added EnumItem VRComfortSetting.Comfort : 0
+	Added EnumItem VRComfortSetting.Normal : 1
+	Added EnumItem VRComfortSetting.Expert : 2
+	Added EnumItem VRComfortSetting.Custom : 3
+
+Added EnumItem CollaboratorStatus.Editing3D : 0
+Added EnumItem CollaboratorStatus.Scripting : 1
+Added EnumItem CollaboratorStatus.PrivateScripting : 2
+Added EnumItem CollaboratorStatus.None : 3
+Added EnumItem ConnectionError.ServerShutdown : 288
+Added EnumItem ConnectionError.NetworkInternal : 296
+Added EnumItem ConnectionError.NetworkSend : 297
+Added EnumItem ConnectionError.NetworkTimeout : 298
+Added EnumItem ConnectionError.NetworkMisbehavior : 299
+Added EnumItem ConnectionError.NetworkSecurity : 300
+
+Changed the category of Property AudioAnalyzer.PeakLevel 
+	from: "Data"
+	  to: "Metering"
+
+Changed the category of Property AudioAnalyzer.RmsLevel 
+	from: "Data"
+	  to: "Metering"
+
+Changed the category of Property AudioChorus.Depth 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioChorus.Mix 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioChorus.Rate 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioCompressor.Attack 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioCompressor.MakeupGain 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioCompressor.Ratio 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioCompressor.Release 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioCompressor.Threshold 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioDeviceInput.AccessList 
+	from: "userIds"
+	  to: "Permissions"
+
+Changed the category of Property AudioDeviceInput.AccessType 
+	from: "Data"
+	  to: "Permissions"
+
+Changed the category of Property AudioDeviceInput.Active 
+	from: "Data"
+	  to: "Recording"
+
+Changed the category of Property AudioDeviceInput.IsReady 
+	from: "Data"
+	  to: "Recording"
+
+Changed the category of Property AudioDeviceInput.Muted 
+	from: "Data"
+	  to: "Recording"
+
+Changed the category of Property AudioDeviceInput.Player 
+	from: "Data"
+	  to: "Recording"
+
+Changed the category of Property AudioDeviceOutput.Player 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioDistortion.Level 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEcho.DelayTime 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEcho.DryLevel 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEcho.Feedback 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEcho.WetLevel 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEmitter.AudioInteractionGroup 
+	from: "Data"
+	  to: "Interactions"
+
+Changed the category of Property AudioEqualizer.HighGain 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEqualizer.LowGain 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEqualizer.MidGain 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioEqualizer.MidRange 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioFader.Volume 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioFlanger.Depth 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioFlanger.Mix 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioFlanger.Rate 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioListener.AudioInteractionGroup 
+	from: "Data"
+	  to: "Interactions"
+
+Changed the category of Property AudioPitchShifter.Pitch 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioPlayer.AssetId 
+	from: "Data"
+	  to: "Asset"
+
+Changed the category of Property AudioPlayer.AutoLoad 
+	from: "Data"
+	  to: "Asset"
+
+Changed the category of Property AudioPlayer.IsReady 
+	from: "Data"
+	  to: "Asset"
+
+Changed the category of Property AudioPlayer.TimeLength 
+	from: "Data"
+	  to: "Asset"
+
+Changed the category of Property AudioPlayer.IsPlaying 
+	from: "Data"
+	  to: "Playback"
+
+Changed the category of Property AudioPlayer.Looping 
+	from: "Data"
+	  to: "Playback"
+
+Changed the category of Property AudioPlayer.PlaybackSpeed 
+	from: "Data"
+	  to: "Playback"
+
+Changed the category of Property AudioPlayer.TimePosition 
+	from: "Data"
+	  to: "Playback"
+
+Changed the category of Property AudioPlayer.LoopRegion 
+	from: "Data"
+	  to: "Regions"
+
+Changed the category of Property AudioPlayer.PlaybackRegion 
+	from: "Data"
+	  to: "Regions"
+
+Changed the category of Property AudioReverb.DecayRatio 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.DecayTime 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.Density 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.Diffusion 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.DryLevel 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.EarlyDelayTime 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.HighCutFrequency 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.LateDelayTime 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.LowShelfFrequency 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.ReferenceFrequency 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property AudioReverb.WetLevel 
+	from: "Data"
+	  to: "State"
+
+Changed the category of Property Wire.Connected 
+	from: "Data"
+	  to: "Connections"
+
+Changed the category of Property Wire.SourceInstance 
+	from: "Data"
+	  to: "Connections"
+
+Changed the category of Property Wire.SourceName 
+	from: "Data"
+	  to: "Connections"
+
+Changed the category of Property Wire.TargetInstance 
+	from: "Data"
+	  to: "Connections"
+
+Changed the category of Property Wire.TargetName 
+	from: "Data"
+	  to: "Connections"
+
+Changed the parameters of Function DynamicImage:Resize 
+	from: (Vector2 newSize)
+	  to: (Vector2 size)
+
+Changed the parameters of Function DynamicImage:Rotate 
+	from: (float degrees, bool resizeCanvas = true)
+	  to: (float degrees, bool changeSize)
+
+Changed the parameters of Function GlobalDataStore:GetAsync 
+	from: (string key)
+	  to: (string key, DataStoreGetOptions options = nil)
+
+Changed the parameters of Function PublishService:CreateAssetAndWaitForAssetId 
+	from: (Objects instances, string operationId, Enum.AssetCreatorType creatorType, int64 creatorId, string assetType, string name, string description)
+	  to: (Objects instances, string operationId, Enum.AssetCreatorType creatorType, int64 creatorId, string assetType, string name, string description, int expectedPrice = 0)
+
+Changed the security of Function MarketplaceService:SignalPromptSubscriptionPurchaseFinished 
+	from: {None}
+	  to: {RobloxScriptSecurity}
+
+Changed the security of Event MarketplaceService.PromptSubscriptionPurchaseFinished 
+	from: {RobloxScriptSecurity}
+	  to: {None}
+
+Removed Property Studio.Render Throttle Percentage
+
+Removed Function ChatbotUIService:DisplayCommand
+Removed Function DynamicImage:Clear
+Removed Function DynamicMesh:InitializeFromMeshIdAsync
+Removed Function DynamicMesh:InitializeFromMeshPartAsync
+
+Removed EnumItem CollaboratorStatus.0
+Removed EnumItem CollaboratorStatus.1
+Removed EnumItem CollaboratorStatus.2
+Removed EnumItem CollaboratorStatus.3
+
+Removed Tag [NotBrowsable] from Property SurfaceGui.MaxDistance
+Removed Tag [NotCreatable] from Class DynamicImage

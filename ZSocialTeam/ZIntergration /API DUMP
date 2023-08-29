@@ -13,9 +13,11 @@ Added Property bool UserGameSettings.VignetteEnabledCustomOption {RobloxScriptSe
 Added Property bool VRService.QuestASWState {RobloxScriptSecurity} [Hidden]
 Added Property float VRService.QuestDisplayRefreshRate {RobloxScriptSecurity} [Hidden]
 Added Property bool VRService.ThirdPersonFollowCamEnabled [ReadOnly]
+Added Property bool VoiceChatService.UseNewControlPaths {RobloxSecurity} [Hidden]
 
 Added Function ClipEvaluator AnimationClipProvider:GetClipEvaluatorAsync(Content assetId) [Yields]
 Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
+Added Function void CaptureService:DeleteCapture(string capturePath) {RobloxScriptSecurity}
 Added Function void ChatbotUIService:DisplayContent(string contentType, Dictionary data) {RobloxScriptSecurity}
 Added Function Vector2 GuiService:GetHardwareSafeViewport() {RobloxScriptSecurity}
 Added Function void Player:SetBlockListInitialized() {RobloxScriptSecurity}
@@ -23,8 +25,14 @@ Added Function Tuple ScriptEditorService:EditSourceAsyncWithRanges(LuaSourceCont
 Added Function Tuple ScriptEditorService:UpdateSourceAsync(LuaSourceContainer script, Function callback) {PluginSecurity} [Yields]
 Added Function bool UGCValidationService:ValidateCageUVTriangleArea(string meshId) {RobloxScriptSecurity} [Yields]
 
+Added Event LiveScriptingService.BroadcastMessage(string message, Enum.LiveEditingBroadcastMessageType type) {RobloxSecurity} [Hidden]
 Added Event LiveScriptingService.SendAtomicOperation(int requestId, string guid, string op, string hash) {RobloxSecurity} [Hidden]
 Added Event LiveScriptingService.SendAtomicUpdateResponse(int guid, Enum.LiveEditingAtomicUpdateResponse response) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.PublishingHandshakeAcked(string handshakeAnswer) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.PublishingHandshakeCompleted() {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.PublishingHandshakeInitiated(string handshakeOffer, Enum.MuteState muteState) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.RelayCandidatesGathered(Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.VoiceSetupFailed(Enum.VoiceControlPath voiceControlPath, string serializedFailure) {RobloxSecurity} [Hidden]
 
 Added Enum LiveEditingAtomicUpdateResponse
 	Added EnumItem LiveEditingAtomicUpdateResponse.Success : 0
@@ -32,11 +40,21 @@ Added Enum LiveEditingAtomicUpdateResponse
 	Added EnumItem LiveEditingAtomicUpdateResponse.FailureHashMismatch : 2
 	Added EnumItem LiveEditingAtomicUpdateResponse.FailureOperationIllegal : 3
 
+Added Enum LiveEditingBroadcastMessageType
+	Added EnumItem LiveEditingBroadcastMessageType.Normal : 0
+	Added EnumItem LiveEditingBroadcastMessageType.Warning : 1
+	Added EnumItem LiveEditingBroadcastMessageType.Error : 2
+
 Added Enum VRComfortSetting
 	Added EnumItem VRComfortSetting.Comfort : 0
 	Added EnumItem VRComfortSetting.Normal : 1
 	Added EnumItem VRComfortSetting.Expert : 2
 	Added EnumItem VRComfortSetting.Custom : 3
+
+Added Enum VoiceControlPath
+	Added EnumItem VoiceControlPath.Publish : 0
+	Added EnumItem VoiceControlPath.Subscribe : 1
+	Added EnumItem VoiceControlPath.Join : 2
 
 Added EnumItem CollaboratorStatus.Editing3D : 0
 Added EnumItem CollaboratorStatus.Scripting : 1

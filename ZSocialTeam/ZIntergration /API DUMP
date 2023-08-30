@@ -17,13 +17,35 @@ Added Property bool VoiceChatService.UseNewControlPaths {RobloxSecurity} [Hidden
 
 Added Function ClipEvaluator AnimationClipProvider:GetClipEvaluatorAsync(Content assetId) [Yields]
 Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
+Added Function Array AudioAnalyzer:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioChorus:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioCompressor:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioDeviceInput:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioDeviceOutput:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioDistortion:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioEcho:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function float AudioEmitter:GetAudibilityFor(AudioListener listener) {RobloxScriptSecurity}
+Added Function Array AudioEmitter:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioEmitter:GetInteractingListeners() {RobloxScriptSecurity}
+Added Function Array AudioEqualizer:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioFader:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioFlanger:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function float AudioListener:GetAudibilityOf(AudioEmitter emitter) {RobloxScriptSecurity}
+Added Function Array AudioListener:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioListener:GetInteractingEmitters() {RobloxScriptSecurity}
+Added Function Array AudioPitchShifter:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioPlayer:GetConnectedWires(string pin) {RobloxScriptSecurity}
+Added Function Array AudioReverb:GetConnectedWires(string pin) {RobloxScriptSecurity}
 Added Function void CaptureService:DeleteCapture(string capturePath) {RobloxScriptSecurity}
 Added Function void ChatbotUIService:DisplayContent(string contentType, Dictionary data) {RobloxScriptSecurity}
 Added Function Vector2 GuiService:GetHardwareSafeViewport() {RobloxScriptSecurity}
+Added Function Array MarketplaceService:GetUserSubscriptionPaymentHistoryAsync(Player user, string subscriptionId) [Yields]
+Added Function Dictionary MarketplaceService:GetUserSubscriptionStatusAsync(Player user, string subscriptionId) [Yields]
 Added Function void Player:SetBlockListInitialized() {RobloxScriptSecurity}
 Added Function Tuple ScriptEditorService:EditSourceAsyncWithRanges(LuaSourceContainer script, string newText, int startLine, int startCharacter, int endLine, int endCharacter) {RobloxScriptSecurity} [Yields]
 Added Function Tuple ScriptEditorService:UpdateSourceAsync(LuaSourceContainer script, Function callback) {PluginSecurity} [Yields]
 Added Function bool UGCValidationService:ValidateCageUVTriangleArea(string meshId) {RobloxScriptSecurity} [Yields]
+Added Function bool UGCValidationService:ValidateMeshTriangleArea(string meshId) {RobloxScriptSecurity} [Yields]
 
 Added Event LiveScriptingService.BroadcastMessage(string message, Enum.LiveEditingBroadcastMessageType type) {RobloxSecurity} [Hidden]
 Added Event LiveScriptingService.SendAtomicOperation(int requestId, string guid, string op, string hash) {RobloxSecurity} [Hidden]
@@ -44,6 +66,13 @@ Added Enum LiveEditingBroadcastMessageType
 	Added EnumItem LiveEditingBroadcastMessageType.Normal : 0
 	Added EnumItem LiveEditingBroadcastMessageType.Warning : 1
 	Added EnumItem LiveEditingBroadcastMessageType.Error : 2
+
+Added Enum SubscriptionPaymentStatus
+	Added EnumItem SubscriptionPaymentStatus.Paid : 0
+	Added EnumItem SubscriptionPaymentStatus.Refunded : 1
+
+Added Enum SubscriptionPeriod
+	Added EnumItem SubscriptionPeriod.Month : 0
 
 Added Enum VRComfortSetting
 	Added EnumItem VRComfortSetting.Comfort : 0

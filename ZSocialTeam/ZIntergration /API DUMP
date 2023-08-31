@@ -65,5 +65,9 @@ Added EnumItem DataStoreRequestType.ListAsync : 6
 Added EnumItem DataStoreRequestType.GetVersionAsync : 7
 Added EnumItem DataStoreRequestType.RemoveVersionAsync : 8
 
+Changed the parameters of Function UGCValidationService:ResetCollisionFidelity 
+	from: (Instance meshPart)
+	  to: (Instance meshPart, Enum.CollisionFidelity collisionFidelity = "Box")
+
 Removed Function DynamicMesh:InitializeFromMeshIdAsync
 Removed Function DynamicMesh:InitializeFromMeshPartAsync

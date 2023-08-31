@@ -5,6 +5,10 @@ Added Class ExperienceService : Instance [NotCreatable] [Service] [NotReplicated
 	Added Function RBXScriptConnection ExperienceService:RegisterForExperienceJoin(Function callback) {RobloxScriptSecurity}
 	Added Function RBXScriptConnection ExperienceService:RegisterForExperienceLeave(Function callback) {RobloxScriptSecurity}
 
+Added Class RibbonNotificationService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function void RibbonNotificationService:NewNotificationFromPlugin(string notificationId) {RobloxScriptSecurity}
+	Added Event RibbonNotificationService.NewNotificationId(string notificationId) {RobloxScriptSecurity}
+
 Added Property BinaryString AnimationRigData.rootMotion [Hidden] [NotScriptable]
 Added Property bool Studio.FreeCameraSpeedScroll {RobloxScriptSecurity}
 Added Property bool VoiceChatService.UseNewControlPaths {RobloxSecurity} [Hidden]

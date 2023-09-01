@@ -9,6 +9,12 @@ Added Class RibbonNotificationService : Instance [NotCreatable] [Service] [NotRe
 	Added Function void RibbonNotificationService:NewNotificationFromPlugin(string notificationId) {RobloxScriptSecurity}
 	Added Event RibbonNotificationService.NewNotificationId(string notificationId) {RobloxScriptSecurity}
 
+Added Class StudioWidgetsService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function void StudioWidgetsService:AttachPluginGui(StudioWidget target, PluginGui gui) {RobloxScriptSecurity}
+	Added Function StudioWidget StudioWidgetsService:GetWidgetFromLabel(string label) {RobloxScriptSecurity}
+	Added Function void StudioWidgetsService:HideSpotlight() {RobloxScriptSecurity}
+	Added Function void StudioWidgetsService:ShowSpotlight(StudioWidget target, bool? sinkInput) {RobloxScriptSecurity}
+
 Added Property BinaryString AnimationRigData.rootMotion [Hidden] [NotScriptable]
 Added Property bool Studio.FreeCameraSpeedScroll {RobloxScriptSecurity}
 Added Property bool VoiceChatService.UseNewControlPaths {RobloxSecurity} [Hidden]

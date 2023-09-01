@@ -14,6 +14,7 @@ Added Property bool Studio.FreeCameraSpeedScroll {RobloxScriptSecurity}
 Added Property bool VoiceChatService.UseNewControlPaths {RobloxSecurity} [Hidden]
 
 Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
+Added Function Tuple AssetService:PromptImportAnimationClipFromVideoAsync(Player player, Function progressCallback) [Yields]
 Added Function Array AudioAnalyzer:GetConnectedWires(string pin) {RobloxScriptSecurity}
 Added Function Array AudioChorus:GetConnectedWires(string pin) {RobloxScriptSecurity}
 Added Function Array AudioCompressor:GetConnectedWires(string pin) {RobloxScriptSecurity}
@@ -49,6 +50,20 @@ Added Event VoiceChatService.PublishingHandshakeCompleted() {RobloxSecurity} [Hi
 Added Event VoiceChatService.PublishingHandshakeInitiated(string handshakeOffer, Enum.MuteState muteState) {RobloxSecurity} [Hidden]
 Added Event VoiceChatService.RelayCandidatesGathered(Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates) {RobloxSecurity} [Hidden]
 Added Event VoiceChatService.VoiceSetupFailed(Enum.VoiceControlPath voiceControlPath, string serializedFailure) {RobloxSecurity} [Hidden]
+
+Added Enum AnimationClipFromVideoStatus
+	Added EnumItem AnimationClipFromVideoStatus.Initializing : 0
+	Added EnumItem AnimationClipFromVideoStatus.Pending : 1
+	Added EnumItem AnimationClipFromVideoStatus.Processing : 2
+	Added EnumItem AnimationClipFromVideoStatus.ErrorGeneric : 4
+	Added EnumItem AnimationClipFromVideoStatus.Success : 6
+	Added EnumItem AnimationClipFromVideoStatus.ErrorVideoTooLong : 7
+	Added EnumItem AnimationClipFromVideoStatus.ErrorNoPersonDetected : 8
+	Added EnumItem AnimationClipFromVideoStatus.ErrorVideoUnstable : 9
+	Added EnumItem AnimationClipFromVideoStatus.Timeout : 10
+	Added EnumItem AnimationClipFromVideoStatus.Cancelled : 11
+	Added EnumItem AnimationClipFromVideoStatus.ErrorMultiplePeople : 12
+	Added EnumItem AnimationClipFromVideoStatus.ErrorUploadingVideo : 2001
 
 Added Enum LiveEditingBroadcastMessageType
 	Added EnumItem LiveEditingBroadcastMessageType.Normal : 0

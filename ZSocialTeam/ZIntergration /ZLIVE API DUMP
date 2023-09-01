@@ -1,3 +1,5 @@
+Version 592.587
+
 Added Class DataStoreGetOptions : Instance [NotReplicated]
 	Added Property bool DataStoreGetOptions.UseCache
 

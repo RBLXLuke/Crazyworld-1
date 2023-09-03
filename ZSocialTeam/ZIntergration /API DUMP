@@ -15,6 +15,10 @@ Added Class StudioWidgetsService : Instance [NotCreatable] [Service] [NotReplica
 	Added Function void StudioWidgetsService:HideSpotlight() {RobloxScriptSecurity}
 	Added Function void StudioWidgetsService:ShowSpotlight(StudioWidget target, bool? sinkInput) {RobloxScriptSecurity}
 
+Added Property CFrame AnimationConstraint.C0 [Hidden] [ReadOnly] [Preliminary]
+Added Property CFrame AnimationConstraint.C1 [Hidden] [ReadOnly] [Preliminary]
+Added Property BasePart AnimationConstraint.Part0 [Hidden] [ReadOnly] [Preliminary]
+Added Property BasePart AnimationConstraint.Part1 [Hidden] [ReadOnly] [Preliminary]
 Added Property BinaryString AnimationRigData.rootMotion [Hidden] [NotScriptable]
 Added Property bool PhysicsSettings.AreNonAnchorsShown
 Added Property bool Studio.FreeCameraSpeedScroll {RobloxScriptSecurity}

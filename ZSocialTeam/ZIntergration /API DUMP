@@ -1,14 +1,3 @@
-Added Class ExperienceService : Instance [NotCreatable] [Service] [NotReplicated]
-	Added Function string ExperienceService:LaunchExperience(Dictionary params) {RobloxScriptSecurity}
-	Added Function string ExperienceService:LaunchExperienceFromSource(Dictionary params, string source) {RobloxScriptSecurity}
-	Added Function void ExperienceService:LaunchExperienceFromSourceWithCallback(Dictionary params, string source, Function callback) {RobloxScriptSecurity}
-	Added Function RBXScriptConnection ExperienceService:RegisterForExperienceJoin(Function callback) {RobloxScriptSecurity}
-	Added Function RBXScriptConnection ExperienceService:RegisterForExperienceLeave(Function callback) {RobloxScriptSecurity}
-
-Added Class RibbonNotificationService : Instance [NotCreatable] [Service] [NotReplicated]
-	Added Function void RibbonNotificationService:NewNotificationFromPlugin(string notificationId) {RobloxScriptSecurity}
-	Added Event RibbonNotificationService.NewNotificationId(string notificationId) {RobloxScriptSecurity}
-
 Added Class StudioWidgetsService : Instance [NotCreatable] [Service] [NotReplicated]
 	Added Function void StudioWidgetsService:AttachPluginGui(StudioWidget target, PluginGui gui) {RobloxScriptSecurity}
 	Added Function StudioWidget StudioWidgetsService:GetWidgetFromLabel(string label) {RobloxScriptSecurity}
@@ -19,48 +8,11 @@ Added Property CFrame AnimationConstraint.C0 [Hidden] [ReadOnly] [Preliminary]
 Added Property CFrame AnimationConstraint.C1 [Hidden] [ReadOnly] [Preliminary]
 Added Property BasePart AnimationConstraint.Part0 [Hidden] [ReadOnly] [Preliminary]
 Added Property BasePart AnimationConstraint.Part1 [Hidden] [ReadOnly] [Preliminary]
-Added Property BinaryString AnimationRigData.rootMotion [Hidden] [NotScriptable]
 Added Property bool PhysicsSettings.AreNonAnchorsShown
-Added Property bool Studio.FreeCameraSpeedScroll {RobloxScriptSecurity}
-Added Property bool VoiceChatService.UseNewControlPaths {RobloxSecurity} [Hidden]
 
-Added Function DynamicMesh AssetService:CreateDynamicMeshAsync(Content meshId) [Yields]
 Added Function Tuple AssetService:PromptImportAnimationClipFromVideoAsync(Player player, Function progressCallback) [Yields]
-Added Function Array AudioAnalyzer:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioChorus:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioCompressor:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioDeviceInput:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioDeviceOutput:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioDistortion:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioEcho:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function float AudioEmitter:GetAudibilityFor(AudioListener listener) {RobloxScriptSecurity}
-Added Function Array AudioEmitter:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioEmitter:GetInteractingListeners() {RobloxScriptSecurity}
-Added Function Array AudioEqualizer:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioFader:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioFlanger:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function float AudioListener:GetAudibilityOf(AudioEmitter emitter) {RobloxScriptSecurity}
-Added Function Array AudioListener:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioListener:GetInteractingEmitters() {RobloxScriptSecurity}
-Added Function Array AudioPitchShifter:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioPlayer:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function Array AudioReverb:GetConnectedWires(string pin) {RobloxScriptSecurity}
-Added Function void CaptureService:DeleteCapture(string capturePath) {RobloxScriptSecurity}
-Added Function void DynamicImage:DrawRectangle(Vector2 position, Vector2 size, Color3 color, float transparency)
-Added Function Dictionary MarketplaceService:GetSubscriptionProductInfoAsync(string subscriptionId) [Yields]
-Added Function Array MarketplaceService:GetUserSubscriptionPaymentHistoryAsync(Player user, string subscriptionId) [Yields]
-Added Function Dictionary MarketplaceService:GetUserSubscriptionStatusAsync(Player user, string subscriptionId) [Yields]
-Added Function void Player:SetBlockListInitialized() {RobloxScriptSecurity}
-Added Function bool UGCValidationService:CheckMeshInCameraFrustum(string meshId, Vector3 meshScale, CFrame handleWorldCF, CFrame cameraWorldCF) {RobloxScriptSecurity} [Yields]
-Added Function bool UGCValidationService:ValidateMeshTriangleArea(string meshId) {RobloxScriptSecurity} [Yields]
-
-Added Event LiveScriptingService.BroadcastMessage(string message, Enum.LiveEditingBroadcastMessageType type) {RobloxSecurity} [Hidden]
-Added Event LiveScriptingService.LiveEditingClientConfiguration(string serializedConfig) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.PublishingHandshakeAcked(string handshakeAnswer) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.PublishingHandshakeCompleted() {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.PublishingHandshakeInitiated(string handshakeOffer, Enum.MuteState muteState) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.RelayCandidatesGathered(Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.VoiceSetupFailed(Enum.VoiceControlPath voiceControlPath, string serializedFailure) {RobloxSecurity} [Hidden]
+Added Function DynamicImage DynamicImage:Copy(Vector2 min, Vector2 max)
+Added Function Content UserInputService:GetImageForKeyCode(Enum.KeyCode keyCode)
 
 Added Enum AnimationClipFromVideoStatus
 	Added EnumItem AnimationClipFromVideoStatus.Initializing : 0
@@ -76,30 +28,6 @@ Added Enum AnimationClipFromVideoStatus
 	Added EnumItem AnimationClipFromVideoStatus.ErrorMultiplePeople : 12
 	Added EnumItem AnimationClipFromVideoStatus.ErrorUploadingVideo : 2001
 
-Added Enum LiveEditingBroadcastMessageType
-	Added EnumItem LiveEditingBroadcastMessageType.Normal : 0
-	Added EnumItem LiveEditingBroadcastMessageType.Warning : 1
-	Added EnumItem LiveEditingBroadcastMessageType.Error : 2
-
-Added Enum SubscriptionPaymentStatus
-	Added EnumItem SubscriptionPaymentStatus.Paid : 0
-	Added EnumItem SubscriptionPaymentStatus.Refunded : 1
-
-Added Enum SubscriptionPeriod
-	Added EnumItem SubscriptionPeriod.Month : 0
-
-Added Enum VoiceControlPath
-	Added EnumItem VoiceControlPath.Publish : 0
-	Added EnumItem VoiceControlPath.Subscribe : 1
-	Added EnumItem VoiceControlPath.Join : 2
-
-Added EnumItem DataStoreRequestType.ListAsync : 6
-Added EnumItem DataStoreRequestType.GetVersionAsync : 7
-Added EnumItem DataStoreRequestType.RemoveVersionAsync : 8
-
-Changed the parameters of Function UGCValidationService:ResetCollisionFidelity 
-	from: (Instance meshPart)
-	  to: (Instance meshPart, Enum.CollisionFidelity collisionFidelity = "Box")
-
-Removed Function DynamicMesh:InitializeFromMeshIdAsync
-Removed Function DynamicMesh:InitializeFromMeshPartAsync
+Changed the security of Event Players.UserSubscriptionStatusChanged 
+	from: {RobloxScriptSecurity}
+	  to: {None}

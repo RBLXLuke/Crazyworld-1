@@ -8,11 +8,19 @@ Added Property CFrame AnimationConstraint.C0 [Hidden] [ReadOnly] [Preliminary]
 Added Property CFrame AnimationConstraint.C1 [Hidden] [ReadOnly] [Preliminary]
 Added Property BasePart AnimationConstraint.Part0 [Hidden] [ReadOnly] [Preliminary]
 Added Property BasePart AnimationConstraint.Part1 [Hidden] [ReadOnly] [Preliminary]
+Added Property Enum.TrackerFaceTrackingStatus FaceAnimatorService.FaceTrackingStatusEnum {RobloxScriptSecurity} [Hidden] [NotReplicated]
+Added Property string HumanoidDescription.AccessoryRigidAndLayeredBlob {RobloxScriptSecurity} [Hidden] [NotScriptable]
 Added Property bool PhysicsSettings.AreNonAnchorsShown
+Added Property Enum.AnimationCompositorMode StarterPlayer.AnimationCompositorMode [NotBrowsable]
 
 Added Function Tuple AssetService:PromptImportAnimationClipFromVideoAsync(Player player, Function progressCallback) [Yields]
 Added Function DynamicImage DynamicImage:Copy(Vector2 min, Vector2 max)
 Added Function Content UserInputService:GetImageForKeyCode(Enum.KeyCode keyCode)
+
+Added Event TeleportService.SendVIPData(Instance player, string vipServerCode, int64 dmPlaceID) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.SubscriptionHandshakeAcked(int eventTag, string handshakeAnswer, string userToMute) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.SubscriptionHandshakeCompleted(string subscriptionInfo) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.SubscriptionHandshakeInitiated(string handshakeOffer, string subscriptionInfo, bool isNewConnection) {RobloxSecurity} [Hidden]
 
 Added Enum AnimationClipFromVideoStatus
 	Added EnumItem AnimationClipFromVideoStatus.Initializing : 0
@@ -28,6 +36,32 @@ Added Enum AnimationClipFromVideoStatus
 	Added EnumItem AnimationClipFromVideoStatus.ErrorMultiplePeople : 12
 	Added EnumItem AnimationClipFromVideoStatus.ErrorUploadingVideo : 2001
 
+Added Enum AnimationCompositorMode
+	Added EnumItem AnimationCompositorMode.Default : 0
+	Added EnumItem AnimationCompositorMode.Enabled : 1
+	Added EnumItem AnimationCompositorMode.Disabled : 2
+
+Added Enum TrackerFaceTrackingStatus
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingSuccess : 0
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingNoFaceFound : 1
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingUnknown : 2
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingLost : 3
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingHasTrackingError : 4
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingIsOccluded : 5
+	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingUninitialized : 6
+
+Added EnumItem TeleportMethod.TeleportToVIPServer : 4
+Added EnumItem TeleportType.ToVIPServer : 2
+
+Changed the security of Property PartOperation.CSGPropertyData 
+	from: {None}
+	  to: {RobloxSecurity}
+
 Changed the security of Event Players.UserSubscriptionStatusChanged 
 	from: {RobloxScriptSecurity}
 	  to: {None}
+
+Changed the value of EnumItem TeleportMethod.TeleportUnknown from 4 to 5
+Changed the value of EnumItem TeleportType.ToReservedServer from 2 to 3
+
+Removed Tag [WriteOnly] from Property Workspace.StreamingPauseMode

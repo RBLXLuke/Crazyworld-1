@@ -1,5 +1,14 @@
+Added Class OperationTree : Instance
+
+Added Class StudioAttachment : Instance
+	Added Property bool StudioAttachment.AutoHideParent
+	Added Property bool StudioAttachment.IsArrowVisible
+	Added Property Vector2 StudioAttachment.Offset
+	Added Property Vector2 StudioAttachment.SourceAnchorPoint
+	Added Property Vector2 StudioAttachment.TargetAnchorPoint
+
 Added Class StudioWidgetsService : Instance [NotCreatable] [Service] [NotReplicated]
-	Added Function void StudioWidgetsService:AttachPluginGui(StudioWidget target, PluginGui gui) {RobloxScriptSecurity}
+	Added Function void StudioWidgetsService:AttachPluginGui(StudioWidget target, PluginGui gui, StudioAttachment attachment) {RobloxScriptSecurity}
 	Added Function StudioWidget StudioWidgetsService:GetWidgetFromLabel(string label) {RobloxScriptSecurity}
 	Added Function void StudioWidgetsService:HideSpotlight() {RobloxScriptSecurity}
 	Added Function void StudioWidgetsService:ShowSpotlight(StudioWidget target, bool? sinkInput) {RobloxScriptSecurity}
@@ -10,6 +19,7 @@ Added Property BasePart AnimationConstraint.Part0 [Hidden] [ReadOnly] [Prelimina
 Added Property BasePart AnimationConstraint.Part1 [Hidden] [ReadOnly] [Preliminary]
 Added Property Enum.TrackerFaceTrackingStatus FaceAnimatorService.FaceTrackingStatusEnum {RobloxScriptSecurity} [Hidden] [NotReplicated]
 Added Property string HumanoidDescription.AccessoryRigidAndLayeredBlob {RobloxScriptSecurity} [Hidden] [NotScriptable]
+Added Property Enum.ServerLiveEditingMode LiveScriptingService.ServerLiveEditingMode [Hidden] [NotScriptable]
 Added Property bool PhysicsSettings.AreNonAnchorsShown
 Added Property Enum.AnimationCompositorMode StarterPlayer.AnimationCompositorMode [NotBrowsable]
 Added Property string TextChatMessage.Translation
@@ -17,6 +27,7 @@ Added Property string TextChatMessageProperties.Translation
 
 Added Function Tuple AssetService:PromptImportAnimationClipFromVideoAsync(Player player, Function progressCallback) [Yields]
 Added Function DynamicImage DynamicImage:Copy(Vector2 min, Vector2 max)
+Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
 Added Function Content UserInputService:GetImageForKeyCode(Enum.KeyCode keyCode)
 
 Added Event TeleportService.SendVIPData(Instance player, string vipServerCode, int64 dmPlaceID) {RobloxSecurity} [Hidden]
@@ -44,6 +55,26 @@ Added Enum AnimationCompositorMode
 	Added EnumItem AnimationCompositorMode.Enabled : 1
 	Added EnumItem AnimationCompositorMode.Disabled : 2
 
+Added Enum OperationType
+	Added EnumItem OperationType.Null : 0
+	Added EnumItem OperationType.Union : 1
+	Added EnumItem OperationType.Subtraction : 2
+	Added EnumItem OperationType.Intersection : 3
+	Added EnumItem OperationType.Primitive : 4
+
+Added Enum PrimitiveType
+	Added EnumItem PrimitiveType.Null : 0
+	Added EnumItem PrimitiveType.Ball : 1
+	Added EnumItem PrimitiveType.Cylinder : 2
+	Added EnumItem PrimitiveType.Block : 3
+	Added EnumItem PrimitiveType.Wedge : 4
+	Added EnumItem PrimitiveType.CornerWedge : 5
+
+Added Enum ServerLiveEditingMode
+	Added EnumItem ServerLiveEditingMode.Uninitialized : 0
+	Added EnumItem ServerLiveEditingMode.Enabled : 1
+	Added EnumItem ServerLiveEditingMode.Disabled : 2
+
 Added Enum TrackerFaceTrackingStatus
 	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingSuccess : 0
 	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingNoFaceFound : 1
@@ -53,8 +84,9 @@ Added Enum TrackerFaceTrackingStatus
 	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingIsOccluded : 5
 	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingUninitialized : 6
 
+Added EnumItem SaveAvatarThumbnailCustomizationFailure.Throttled : 6
 Added EnumItem TeleportMethod.TeleportToVIPServer : 4
-Added EnumItem TeleportType.ToVIPServer : 2
+Added EnumItem TeleportType.ToVIPServer : 3
 
 Changed the security of Property PartOperation.CSGPropertyData 
 	from: {None}
@@ -65,6 +97,5 @@ Changed the security of Event Players.UserSubscriptionStatusChanged
 	  to: {None}
 
 Changed the value of EnumItem TeleportMethod.TeleportUnknown from 4 to 5
-Changed the value of EnumItem TeleportType.ToReservedServer from 2 to 3
 
 Removed Tag [WriteOnly] from Property Workspace.StreamingPauseMode

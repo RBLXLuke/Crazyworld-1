@@ -1,5 +1,8 @@
 Added Class OperationTree : Instance
 
+Added Class PlayerViewService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function CFrame PlayerViewService:GetDeviceCameraCFrame(Player player = nil)
+
 Added Class StudioAttachment : Instance
 	Added Property bool StudioAttachment.AutoHideParent
 	Added Property bool StudioAttachment.IsArrowVisible

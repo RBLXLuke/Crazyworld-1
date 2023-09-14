@@ -1,3 +1,9 @@
+Added Class BodyPartDescription : Instance [NotBrowsable]
+	Added Property int64 BodyPartDescription.AssetId
+	Added Property Enum.BodyPart BodyPartDescription.BodyPart
+	Added Property Color3 BodyPartDescription.Color
+	Added Property Instance BodyPartDescription.Instance
+
 Added Class OperationTree : Instance
 
 Added Class PlayerViewService : Instance [NotCreatable] [Service] [NotReplicated]
@@ -11,6 +17,9 @@ Added Class StudioAttachment : Instance
 	Added Property Vector2 StudioAttachment.TargetAnchorPoint
 
 Added Property Enum.ServerLiveEditingMode LiveScriptingService.ServerLiveEditingMode [Hidden] [NotScriptable]
+Added Property float PhysicsSettings.FluidForceDrawScale {RobloxScriptSecurity}
+Added Property bool PhysicsSettings.ShowFluidForcesForSelectedOrHoveredAssemblies {RobloxScriptSecurity}
+Added Property float Terrain.GrassLength [NotScriptable] [NotBrowsable]
 Added Property string TextChatMessage.Translation
 Added Property string TextChatMessageProperties.Translation
 Added Property bool TextChatService.ChatTranslationEnabled {✏️RobloxScriptSecurity}

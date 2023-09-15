@@ -27,6 +27,7 @@ Added Property bool TextChatService.ChatTranslationToggleEnabled {RobloxScriptSe
 
 Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
 
+Added Event Animator.OnStreamingUpdated2(float fadeTime, float weight, Enum.AnimationPriority priority, bool maskEnabled, int valuesUpdated) {RobloxSecurity} [Hidden]
 Added Event TextChatService.ServerToClientMessageReplicateSignalV2(Dictionary data) {RobloxSecurity} [Hidden]
 
 Added Enum OperationType
@@ -50,6 +51,10 @@ Added Enum ServerLiveEditingMode
 	Added EnumItem ServerLiveEditingMode.Disabled : 2
 
 Added EnumItem SaveAvatarThumbnailCustomizationFailure.Throttled : 6
+
+Added Tags [NotCreatable] [NotReplicated] to Class StudioCallout
+Added Tags [NotCreatable] [NotReplicated] to Class StudioObjectBase
+Added Tags [NotCreatable] [NotReplicated] to Class StudioWidget
 
 Changed the parameters of Function StudioWidgetsService:AttachPluginGui 
 	from: (StudioWidget target, PluginGui gui)

@@ -1,3 +1,11 @@
+Added Class AccessoryDescription : Instance [NotBrowsable]
+	Added Property Enum.AccessoryType AccessoryDescription.AccessoryType
+	Added Property int64 AccessoryDescription.AssetId
+	Added Property Instance AccessoryDescription.Instance
+	Added Property bool AccessoryDescription.IsLayered
+	Added Property int AccessoryDescription.Order
+	Added Property float AccessoryDescription.Puffiness
+
 Added Class BodyPartDescription : Instance [NotBrowsable]
 	Added Property int64 BodyPartDescription.AssetId
 	Added Property Enum.BodyPart BodyPartDescription.BodyPart
@@ -93,6 +101,8 @@ Changed the parameters of Event VoiceChatService.VoiceSetupFailed
 	  to: (Enum.VoiceControlPath voiceControlPath, string serializedFailure, string sessionId)
 
 Removed Property Workspace.HumanoidOnlySetCollisionsOnStateChange
+
+Removed Function Humanoid:ApplyDescriptionBlocking
 
 Removed Enum HumanoidOnlySetCollisionsOnStateChange
 	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Default

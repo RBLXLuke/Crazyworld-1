@@ -1,0 +1,101 @@
+595 (canary)
+Added Class BodyPartDescription : Instance [NotBrowsable]
+	Added Property int64 BodyPartDescription.AssetId
+	Added Property Enum.BodyPart BodyPartDescription.BodyPart
+	Added Property Color3 BodyPartDescription.Color
+	Added Property Instance BodyPartDescription.Instance
+
+Added Class OperationTree : Instance
+
+Added Class PlayerViewService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function CFrame PlayerViewService:GetDeviceCameraCFrame(Player player = nil)
+
+Added Class StudioAttachment : Instance
+	Added Property bool StudioAttachment.AutoHideParent
+	Added Property bool StudioAttachment.IsArrowVisible
+	Added Property Vector2 StudioAttachment.Offset
+	Added Property Vector2 StudioAttachment.SourceAnchorPoint
+	Added Property Vector2 StudioAttachment.TargetAnchorPoint
+
+Added Property Enum.ServerLiveEditingMode LiveScriptingService.ServerLiveEditingMode [Hidden] [NotScriptable]
+Added Property float PhysicsSettings.FluidForceDrawScale {RobloxScriptSecurity}
+Added Property bool PhysicsSettings.ShowFluidForcesForSelectedOrHoveredAssemblies {RobloxScriptSecurity}
+Added Property float Terrain.GrassLength [NotScriptable] [NotBrowsable]
+Added Property string TextChatMessage.Translation
+Added Property string TextChatMessageProperties.Translation
+Added Property bool TextChatService.ChatTranslationEnabled {✏️RobloxScriptSecurity}
+Added Property bool TextChatService.ChatTranslationToggleEnabled {RobloxScriptSecurity}
+
+Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
+
+Added Event Animator.OnStreamingUpdated2(float fadeTime, float weight, Enum.AnimationPriority priority, bool maskEnabled, int valuesUpdated) {RobloxSecurity} [Hidden]
+Added Event TextChatService.ServerToClientMessageReplicateSignalV2(Dictionary data) {RobloxSecurity} [Hidden]
+
+Added Enum OperationType
+	Added EnumItem OperationType.Null : 0
+	Added EnumItem OperationType.Union : 1
+	Added EnumItem OperationType.Subtraction : 2
+	Added EnumItem OperationType.Intersection : 3
+	Added EnumItem OperationType.Primitive : 4
+
+Added Enum PrimitiveType
+	Added EnumItem PrimitiveType.Null : 0
+	Added EnumItem PrimitiveType.Ball : 1
+	Added EnumItem PrimitiveType.Cylinder : 2
+	Added EnumItem PrimitiveType.Block : 3
+	Added EnumItem PrimitiveType.Wedge : 4
+	Added EnumItem PrimitiveType.CornerWedge : 5
+
+Added Enum ServerLiveEditingMode
+	Added EnumItem ServerLiveEditingMode.Uninitialized : 0
+	Added EnumItem ServerLiveEditingMode.Enabled : 1
+	Added EnumItem ServerLiveEditingMode.Disabled : 2
+
+Added EnumItem SaveAvatarThumbnailCustomizationFailure.Throttled : 6
+
+Added Tags [NotCreatable] [NotReplicated] to Class StudioCallout
+Added Tags [NotCreatable] [NotReplicated] to Class StudioObjectBase
+Added Tags [NotCreatable] [NotReplicated] to Class StudioWidget
+
+Changed the parameters of Function StudioWidgetsService:AttachPluginGui 
+	from: (StudioWidget target, PluginGui gui)
+	  to: (StudioWidget target, PluginGui gui, StudioAttachment attachment)
+
+Changed the parameters of Event VoiceChatService.PublishingHandshakeAcked 
+	from: (string handshakeAnswer)
+	  to: (string handshakeAnswer, string sessionId)
+
+Changed the parameters of Event VoiceChatService.PublishingHandshakeCompleted 
+	from: ()
+	  to: (string sessionId)
+
+Changed the parameters of Event VoiceChatService.PublishingHandshakeInitiated 
+	from: (string handshakeOffer, Enum.MuteState muteState)
+	  to: (string handshakeOffer, Enum.MuteState muteState, string sessionId)
+
+Changed the parameters of Event VoiceChatService.RelayCandidatesGathered 
+	from: (Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates)
+	  to: (Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates, bool isLast, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeAcked 
+	from: (int eventTag, string handshakeAnswer, string userToMute)
+	  to: (int eventTag, string handshakeAnswer, string userToMute, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeCompleted 
+	from: (string subscriptionInfo)
+	  to: (string subscriptionInfo, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeInitiated 
+	from: (string handshakeOffer, string subscriptionInfo, bool isNewConnection)
+	  to: (string handshakeOffer, string subscriptionInfo, bool isNewConnection, string sessionId)
+
+Changed the parameters of Event VoiceChatService.VoiceSetupFailed 
+	from: (Enum.VoiceControlPath voiceControlPath, string serializedFailure)
+	  to: (Enum.VoiceControlPath voiceControlPath, string serializedFailure, string sessionId)
+
+Removed Property Workspace.HumanoidOnlySetCollisionsOnStateChange
+
+Removed Enum HumanoidOnlySetCollisionsOnStateChange
+	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Default
+	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Disabled
+	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Enabled

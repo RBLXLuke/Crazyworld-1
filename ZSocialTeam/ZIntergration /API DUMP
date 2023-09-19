@@ -32,11 +32,18 @@ Added Property string TextChatMessage.Translation
 Added Property string TextChatMessageProperties.Translation
 Added Property bool TextChatService.ChatTranslationEnabled {✏️RobloxScriptSecurity}
 Added Property bool TextChatService.ChatTranslationToggleEnabled {RobloxScriptSecurity}
+Added Property Enum.EditorLiveScripting Workspace.EditorLiveScripting [NotScriptable]
 
+Added Function bool AppUpdateService:CanPerformBinaryUpdate() {RobloxScriptSecurity}
 Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
 
 Added Event Animator.OnStreamingUpdated2(float fadeTime, float weight, Enum.AnimationPriority priority, bool maskEnabled, int valuesUpdated) {RobloxSecurity} [Hidden]
 Added Event TextChatService.ServerToClientMessageReplicateSignalV2(Dictionary data) {RobloxSecurity} [Hidden]
+
+Added Enum EditorLiveScripting
+	Added EnumItem EditorLiveScripting.Default : 0
+	Added EnumItem EditorLiveScripting.Disabled : 1
+	Added EnumItem EditorLiveScripting.Enabled : 2
 
 Added Enum OperationType
 	Added EnumItem OperationType.Null : 0

@@ -36,6 +36,7 @@ Added Property Enum.EditorLiveScripting Workspace.EditorLiveScripting [NotScript
 
 Added Function bool AppUpdateService:CanPerformBinaryUpdate() {RobloxScriptSecurity}
 Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
+Added Function string TutorialService:GetTutorialIDToLaunch() {RobloxScriptSecurity}
 
 Added Event Animator.OnStreamingUpdated2(float fadeTime, float weight, Enum.AnimationPriority priority, bool maskEnabled, int valuesUpdated) {RobloxSecurity} [Hidden]
 Added Event TextChatService.ServerToClientMessageReplicateSignalV2(Dictionary data) {RobloxSecurity} [Hidden]

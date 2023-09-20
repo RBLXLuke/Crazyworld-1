@@ -12,10 +12,14 @@ Added Class BodyPartDescription : Instance [NotBrowsable]
 	Added Property Color3 BodyPartDescription.Color
 	Added Property Instance BodyPartDescription.Instance
 
+Added Class CreationDBService : Instance [NotCreatable] [Service] [NotReplicated]
 Added Class OperationTree : Instance
 
 Added Class PlayerViewService : Instance [NotCreatable] [Service] [NotReplicated]
 	Added Function CFrame PlayerViewService:GetDeviceCameraCFrame(Player player = nil)
+
+Added Class ReflectionService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function Array ReflectionService:GetPropertyNames(string name) {RobloxScriptSecurity}
 
 Added Class StudioAttachment : Instance
 	Added Property bool StudioAttachment.AutoHideParent
@@ -36,9 +40,11 @@ Added Property Enum.EditorLiveScripting Workspace.EditorLiveScripting [NotScript
 
 Added Function bool AppUpdateService:CanPerformBinaryUpdate() {RobloxScriptSecurity}
 Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
+Added Function Secret HttpService:GetSecret(string key) {🧬Safe}
 Added Function string TutorialService:GetTutorialIDToLaunch() {RobloxScriptSecurity}
 Added Function bool TutorialService:HideOnlyNamedWidgets(string configurationLabel) {RobloxScriptSecurity}
 Added Function bool TutorialService:ShowOnlyNamedWidgets(string configurationLabel) {RobloxScriptSecurity}
+Added Function bool UGCValidationService:ValidateUVValuesInReference(Array referenceValues, string meshId) {RobloxScriptSecurity} [Yields]
 
 Added Event Animator.OnStreamingUpdated2(float fadeTime, float weight, Enum.AnimationPriority priority, bool maskEnabled, int valuesUpdated) {RobloxSecurity} [Hidden]
 Added Event TextChatService.ServerToClientMessageReplicateSignalV2(Dictionary data) {RobloxSecurity} [Hidden]

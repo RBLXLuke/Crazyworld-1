@@ -1,68 +1,102 @@
-Version 594
+Version 595
 
-Added Class StudioWidgetsService : Instance [NotCreatable] [Service] [NotReplicated]
-	Added Function void StudioWidgetsService:AttachPluginGui(StudioWidget target, PluginGui gui) {RobloxScriptSecurity}
-	Added Function StudioWidget StudioWidgetsService:GetWidgetFromLabel(string label) {RobloxScriptSecurity}
-	Added Function void StudioWidgetsService:HideSpotlight() {RobloxScriptSecurity}
-	Added Function void StudioWidgetsService:ShowSpotlight(StudioWidget target, bool? sinkInput) {RobloxScriptSecurity}
+Added Class BodyPartDescription : Instance [NotBrowsable]
+	Added Property int64 BodyPartDescription.AssetId
+	Added Property Enum.BodyPart BodyPartDescription.BodyPart
+	Added Property Color3 BodyPartDescription.Color
+	Added Property Instance BodyPartDescription.Instance
 
-Added Property CFrame AnimationConstraint.C0 [Hidden] [ReadOnly] [Preliminary]
-Added Property CFrame AnimationConstraint.C1 [Hidden] [ReadOnly] [Preliminary]
-Added Property BasePart AnimationConstraint.Part0 [Hidden] [ReadOnly] [Preliminary]
-Added Property BasePart AnimationConstraint.Part1 [Hidden] [ReadOnly] [Preliminary]
-Added Property Enum.TrackerFaceTrackingStatus FaceAnimatorService.FaceTrackingStatusEnum {RobloxScriptSecurity} [Hidden] [NotReplicated]
-Added Property string HumanoidDescription.AccessoryRigidAndLayeredBlob {RobloxScriptSecurity} [Hidden] [NotScriptable]
-Added Property bool PhysicsSettings.AreNonAnchorsShown
-Added Property Enum.AnimationCompositorMode StarterPlayer.AnimationCompositorMode [NotBrowsable]
+Added Class OperationTree : Instance
 
-Added Function Tuple AssetService:PromptImportAnimationClipFromVideoAsync(Player player, Function progressCallback) [Yields]
-Added Function DynamicImage DynamicImage:Copy(Vector2 min, Vector2 max)
-Added Function Content UserInputService:GetImageForKeyCode(Enum.KeyCode keyCode)
+Added Class PlayerViewService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function CFrame PlayerViewService:GetDeviceCameraCFrame(Player player = nil)
 
-Added Event TeleportService.SendVIPData(Instance player, string vipServerCode, int64 dmPlaceID) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.SubscriptionHandshakeAcked(int eventTag, string handshakeAnswer, string userToMute) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.SubscriptionHandshakeCompleted(string subscriptionInfo) {RobloxSecurity} [Hidden]
-Added Event VoiceChatService.SubscriptionHandshakeInitiated(string handshakeOffer, string subscriptionInfo, bool isNewConnection) {RobloxSecurity} [Hidden]
+Added Class StudioAttachment : Instance
+	Added Property bool StudioAttachment.AutoHideParent
+	Added Property bool StudioAttachment.IsArrowVisible
+	Added Property Vector2 StudioAttachment.Offset
+	Added Property Vector2 StudioAttachment.SourceAnchorPoint
+	Added Property Vector2 StudioAttachment.TargetAnchorPoint
 
-Added Enum AnimationClipFromVideoStatus
-	Added EnumItem AnimationClipFromVideoStatus.Initializing : 0
-	Added EnumItem AnimationClipFromVideoStatus.Pending : 1
-	Added EnumItem AnimationClipFromVideoStatus.Processing : 2
-	Added EnumItem AnimationClipFromVideoStatus.ErrorGeneric : 4
-	Added EnumItem AnimationClipFromVideoStatus.Success : 6
-	Added EnumItem AnimationClipFromVideoStatus.ErrorVideoTooLong : 7
-	Added EnumItem AnimationClipFromVideoStatus.ErrorNoPersonDetected : 8
-	Added EnumItem AnimationClipFromVideoStatus.ErrorVideoUnstable : 9
-	Added EnumItem AnimationClipFromVideoStatus.Timeout : 10
-	Added EnumItem AnimationClipFromVideoStatus.Cancelled : 11
-	Added EnumItem AnimationClipFromVideoStatus.ErrorMultiplePeople : 12
-	Added EnumItem AnimationClipFromVideoStatus.ErrorUploadingVideo : 2001
+Added Property Enum.ServerLiveEditingMode LiveScriptingService.ServerLiveEditingMode [Hidden] [NotScriptable]
+Added Property float PhysicsSettings.FluidForceDrawScale {RobloxScriptSecurity}
+Added Property bool PhysicsSettings.ShowFluidForcesForSelectedOrHoveredAssemblies {RobloxScriptSecurity}
+Added Property float Terrain.GrassLength [NotScriptable] [NotBrowsable]
+Added Property string TextChatMessage.Translation
+Added Property string TextChatMessageProperties.Translation
+Added Property bool TextChatService.ChatTranslationEnabled {✏️RobloxScriptSecurity}
+Added Property bool TextChatService.ChatTranslationToggleEnabled {RobloxScriptSecurity}
 
-Added Enum AnimationCompositorMode
-	Added EnumItem AnimationCompositorMode.Default : 0
-	Added EnumItem AnimationCompositorMode.Enabled : 1
-	Added EnumItem AnimationCompositorMode.Disabled : 2
+Added Function void DynamicImage:DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency)
 
-Added Enum TrackerFaceTrackingStatus
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingSuccess : 0
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingNoFaceFound : 1
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingUnknown : 2
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingLost : 3
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingHasTrackingError : 4
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingIsOccluded : 5
-	Added EnumItem TrackerFaceTrackingStatus.FaceTrackingUninitialized : 6
+Added Event Animator.OnStreamingUpdated2(float fadeTime, float weight, Enum.AnimationPriority priority, bool maskEnabled, int valuesUpdated) {RobloxSecurity} [Hidden]
+Added Event TextChatService.ServerToClientMessageReplicateSignalV2(Dictionary data) {RobloxSecurity} [Hidden]
 
-Added EnumItem TeleportMethod.TeleportToVIPServer : 4
-Added EnumItem TeleportType.ToVIPServer : 3
+Added Enum OperationType
+	Added EnumItem OperationType.Null : 0
+	Added EnumItem OperationType.Union : 1
+	Added EnumItem OperationType.Subtraction : 2
+	Added EnumItem OperationType.Intersection : 3
+	Added EnumItem OperationType.Primitive : 4
 
-Changed the security of Property PartOperation.CSGPropertyData 
-	from: {None}
-	  to: {RobloxSecurity}
+Added Enum PrimitiveType
+	Added EnumItem PrimitiveType.Null : 0
+	Added EnumItem PrimitiveType.Ball : 1
+	Added EnumItem PrimitiveType.Cylinder : 2
+	Added EnumItem PrimitiveType.Block : 3
+	Added EnumItem PrimitiveType.Wedge : 4
+	Added EnumItem PrimitiveType.CornerWedge : 5
 
-Changed the security of Event Players.UserSubscriptionStatusChanged 
-	from: {RobloxScriptSecurity}
-	  to: {None}
+Added Enum ServerLiveEditingMode
+	Added EnumItem ServerLiveEditingMode.Uninitialized : 0
+	Added EnumItem ServerLiveEditingMode.Enabled : 1
+	Added EnumItem ServerLiveEditingMode.Disabled : 2
 
-Changed the value of EnumItem TeleportMethod.TeleportUnknown from 4 to 5
+Added EnumItem SaveAvatarThumbnailCustomizationFailure.Throttled : 6
 
-Removed Tag [WriteOnly] from Property Workspace.StreamingPauseMode
+Added Tags [NotCreatable] [NotReplicated] to Class StudioCallout
+Added Tags [NotCreatable] [NotReplicated] to Class StudioObjectBase
+Added Tags [NotCreatable] [NotReplicated] to Class StudioWidget
+
+Changed the parameters of Function StudioWidgetsService:AttachPluginGui 
+	from: (StudioWidget target, PluginGui gui)
+	  to: (StudioWidget target, PluginGui gui, StudioAttachment attachment)
+
+Changed the parameters of Event VoiceChatService.PublishingHandshakeAcked 
+	from: (string handshakeAnswer)
+	  to: (string handshakeAnswer, string sessionId)
+
+Changed the parameters of Event VoiceChatService.PublishingHandshakeCompleted 
+	from: ()
+	  to: (string sessionId)
+
+Changed the parameters of Event VoiceChatService.PublishingHandshakeInitiated 
+	from: (string handshakeOffer, Enum.MuteState muteState)
+	  to: (string handshakeOffer, Enum.MuteState muteState, string sessionId)
+
+Changed the parameters of Event VoiceChatService.RelayCandidatesGathered 
+	from: (Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates)
+	  to: (Enum.VoiceControlPath voiceControlPath, string serializedIceCandidates, bool isLast, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeAcked 
+	from: (int eventTag, string handshakeAnswer, string userToMute)
+	  to: (int eventTag, string handshakeAnswer, string userToMute, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeCompleted 
+	from: (string subscriptionInfo)
+	  to: (string subscriptionInfo, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeInitiated 
+	from: (string handshakeOffer, string subscriptionInfo, bool isNewConnection)
+	  to: (string handshakeOffer, string subscriptionInfo, bool isNewConnection, string sessionId)
+
+Changed the parameters of Event VoiceChatService.VoiceSetupFailed 
+	from: (Enum.VoiceControlPath voiceControlPath, string serializedFailure)
+	  to: (Enum.VoiceControlPath voiceControlPath, string serializedFailure, string sessionId)
+
+Removed Property Workspace.HumanoidOnlySetCollisionsOnStateChange
+
+Removed Enum HumanoidOnlySetCollisionsOnStateChange
+	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Default
+	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Disabled
+	Removed EnumItem HumanoidOnlySetCollisionsOnStateChange.Enabled

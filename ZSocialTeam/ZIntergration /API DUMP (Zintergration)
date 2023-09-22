@@ -18,6 +18,10 @@ Added Property bool TextChatCommand.AutocompleteVisible
 Added Property Enum.EditorLiveScripting Workspace.EditorLiveScripting [NotScriptable]
 
 Added Function bool AppUpdateService:CanPerformBinaryUpdate() {RobloxScriptSecurity}
+Added Function Map AssetImportService:GetAllPresets() {RobloxScriptSecurity}
+Added Function Map AssetImportService:GetPreset(string name) {RobloxScriptSecurity}
+Added Function void AssetImportService:RemovePreset(string name) {RobloxScriptSecurity}
+Added Function bool AssetImportService:SavePreset(string name, Dictionary importTemplate) {RobloxScriptSecurity}
 Added Function Secret HttpService:GetSecret(string key) {🧬Safe}
 Added Function string TutorialService:GetTutorialIDToLaunch() {RobloxScriptSecurity}
 Added Function bool TutorialService:HideOnlyNamedWidgets(string configurationLabel) {RobloxScriptSecurity}
@@ -31,6 +35,10 @@ Added Enum EditorLiveScripting
 
 Added EnumItem ScreenInsets.TopbarSafeInsets : 3
 
+Removed Function AssetImportService:GetAllTemplates
+Removed Function AssetImportService:GetTemplate
+Removed Function AssetImportService:RemoveTemplate
+Removed Function AssetImportService:SaveTemplate
 Removed Function Humanoid:ApplyDescriptionBlocking
 
 Removed Event AssetImportSession.UploadCompleteDeprecated

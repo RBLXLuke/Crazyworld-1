@@ -35,6 +35,78 @@ Added Enum EditorLiveScripting
 
 Added EnumItem ScreenInsets.TopbarSafeInsets : 3
 
+Changed the memory category of Class AudioAnalyzer 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioChorus 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioCompressor 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioDeviceInput 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioDeviceOutput 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioDistortion 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioEcho 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioEmitter 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioEqualizer 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioFader 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioFlanger 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioListener 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioPitchShifter 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioPlayer 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the memory category of Class AudioReverb 
+	from: "Instances"
+	  to: "Internal"
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeAcked 
+	from: (int eventTag, string handshakeAnswer, string userToMute, string sessionId)
+	  to: (int eventTag, string handshakeAnswer, string usersToMute, string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeCompleted 
+	from: (string subscriptionInfo, string sessionId)
+	  to: (string sessionId)
+
+Changed the parameters of Event VoiceChatService.SubscriptionHandshakeInitiated 
+	from: (string handshakeOffer, string subscriptionInfo, bool isNewConnection, string sessionId)
+	  to: (string handshakeOffer, string newSubscriptionStates, bool isNewConnection, string sessionId)
+
 Removed Function AssetImportService:GetAllTemplates
 Removed Function AssetImportService:GetTemplate
 Removed Function AssetImportService:RemoveTemplate

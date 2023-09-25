@@ -23,9 +23,13 @@ Added Function Map AssetImportService:GetPreset(string name) {RobloxScriptSecuri
 Added Function void AssetImportService:RemovePreset(string name) {RobloxScriptSecurity}
 Added Function bool AssetImportService:SavePreset(string name, Dictionary importTemplate) {RobloxScriptSecurity}
 Added Function Secret HttpService:GetSecret(string key) {🧬Safe}
+Added Function void StudioWidgetsService:ApplyFillInBox(StudioWidget target) {RobloxScriptSecurity}
+Added Function void StudioWidgetsService:ApplyHighlight(StudioWidget target, string? rowName) {RobloxScriptSecurity}
+Added Function void StudioWidgetsService:ApplyShadows() {RobloxScriptSecurity}
+Added Function void StudioWidgetsService:ApplySpotlight(StudioWidget target, string? rowName) {RobloxScriptSecurity}
 Added Function string TutorialService:GetTutorialIDToLaunch() {RobloxScriptSecurity}
-Added Function bool TutorialService:HideOnlyNamedWidgets(string configurationLabel) {RobloxScriptSecurity}
-Added Function bool TutorialService:ShowOnlyNamedWidgets(string configurationLabel) {RobloxScriptSecurity}
+Added Function bool TutorialService:HideWidgets(string commaSeparatedNames) {RobloxScriptSecurity}
+Added Function bool TutorialService:ShowWidgets(string commaSeparatedNames) {RobloxScriptSecurity}
 Added Function bool UGCValidationService:ValidateUVValuesInReference(Array referenceValues, string meshId) {RobloxScriptSecurity} [Yields]
 
 Added Enum EditorLiveScripting
@@ -34,6 +38,9 @@ Added Enum EditorLiveScripting
 	Added EnumItem EditorLiveScripting.Enabled : 2
 
 Added EnumItem ScreenInsets.TopbarSafeInsets : 3
+Added EnumItem StudioStyleGuideColor.OnboardingCover : 132
+Added EnumItem StudioStyleGuideColor.OnboardingHighlight : 133
+Added EnumItem StudioStyleGuideColor.OnboardingShadow : 134
 
 Changed the memory category of Class AudioAnalyzer 
 	from: "Instances"
@@ -112,5 +119,6 @@ Removed Function AssetImportService:GetTemplate
 Removed Function AssetImportService:RemoveTemplate
 Removed Function AssetImportService:SaveTemplate
 Removed Function Humanoid:ApplyDescriptionBlocking
+Removed Function StudioWidgetsService:ShowSpotlight
 
 Removed Event AssetImportSession.UploadCompleteDeprecated

@@ -6,7 +6,13 @@ Added Class AccessoryDescription : Instance [NotBrowsable]
 	Added Property int AccessoryDescription.Order
 	Added Property float AccessoryDescription.Puffiness
 
+Added Class AvatarCreationService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function Tuple AvatarCreationService:PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription) [Yields]
+
 Added Class CreationDBService : Instance [NotCreatable] [Service] [NotReplicated]
+
+Added Class LogReporterService : Instance [NotCreatable] [Service] [NotReplicated]
+	Added Function bool LogReporterService:ReportLog(string logId, string desc) {RobloxScriptSecurity}
 
 Added Class ReflectionService : Instance [NotCreatable] [Service] [NotReplicated]
 	Added Function Array ReflectionService:GetPropertyNames(string name) {RobloxScriptSecurity}

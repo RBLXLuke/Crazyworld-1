@@ -1,49 +1,26 @@
-Added Class AccessoryDescription : Instance [NotBrowsable]
-	Added Property Enum.AccessoryType AccessoryDescription.AccessoryType
-	Added Property int64 AccessoryDescription.AssetId
-	Added Property Instance AccessoryDescription.Instance
-	Added Property bool AccessoryDescription.IsLayered
-	Added Property int AccessoryDescription.Order
-	Added Property float AccessoryDescription.Puffiness
-
 Added Class AvatarCreationService : Instance [NotCreatable] [Service] [NotReplicated]
 	Added Function Tuple AvatarCreationService:PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription) [Yields]
-
-Added Class CreationDBService : Instance [NotCreatable] [Service] [NotReplicated]
 
 Added Class LogReporterService : Instance [NotCreatable] [Service] [NotReplicated]
 	Added Function bool LogReporterService:ReportLog(string logId, string desc) {RobloxScriptSecurity}
 
-Added Class ReflectionService : Instance [NotCreatable] [Service] [NotReplicated]
-	Added Function Array ReflectionService:GetPropertyNames(string name) {RobloxScriptSecurity}
-
-Added Property CFrame Animator.RootMotion [ReadOnly] [NotBrowsable]
-Added Property float Animator.RootMotionWeight [ReadOnly] [NotBrowsable]
-Added Property bool RootImportData.ValidateUgcBody
-Added Property bool TextChatCommand.AutocompleteVisible
-Added Property Enum.EditorLiveScripting Workspace.EditorLiveScripting [NotScriptable]
-
-Added Function bool AppUpdateService:CanPerformBinaryUpdate() {RobloxScriptSecurity}
 Added Function Map AssetImportService:GetAllPresets() {RobloxScriptSecurity}
 Added Function Map AssetImportService:GetPreset(string name) {RobloxScriptSecurity}
 Added Function void AssetImportService:RemovePreset(string name) {RobloxScriptSecurity}
-Added Function bool AssetImportService:SavePreset(string name, Dictionary importTemplate) {RobloxScriptSecurity}
-Added Function Secret HttpService:GetSecret(string key) {🧬Safe}
+Added Function bool AssetImportService:SavePreset(string name, Dictionary preset) {RobloxScriptSecurity}
+Added Function void AssetImportSession:ApplyPreset(Dictionary preset) {RobloxScriptSecurity}
+Added Function Map BaseImportData:CreatePresetFromData() {RobloxScriptSecurity}
+Added Function string MarketplaceService:PerformSubscriptionPurchase(string subscriptionId) {RobloxScriptSecurity} [Yields]
 Added Function void StudioWidgetsService:ApplyFillInBox(StudioWidget target) {RobloxScriptSecurity}
 Added Function void StudioWidgetsService:ApplyHighlight(StudioWidget target, string? rowName) {RobloxScriptSecurity}
 Added Function void StudioWidgetsService:ApplyShadows() {RobloxScriptSecurity}
 Added Function void StudioWidgetsService:ApplySpotlight(StudioWidget target, string? rowName) {RobloxScriptSecurity}
-Added Function string TutorialService:GetTutorialIDToLaunch() {RobloxScriptSecurity}
 Added Function bool TutorialService:HideWidgets(string commaSeparatedNames) {RobloxScriptSecurity}
 Added Function bool TutorialService:ShowWidgets(string commaSeparatedNames) {RobloxScriptSecurity}
-Added Function bool UGCValidationService:ValidateUVValuesInReference(Array referenceValues, string meshId) {RobloxScriptSecurity} [Yields]
 
-Added Enum EditorLiveScripting
-	Added EnumItem EditorLiveScripting.Default : 0
-	Added EnumItem EditorLiveScripting.Disabled : 1
-	Added EnumItem EditorLiveScripting.Enabled : 2
+Added Event VoiceChatService.PublishStateChange(Enum.MuteState muteState, string sessionId) {RobloxSecurity} [Hidden]
+Added Event VoiceChatService.SubscribeStateChange(Enum.MuteState muteState, string userIds, string sessionId) {RobloxSecurity} [Hidden]
 
-Added EnumItem ScreenInsets.TopbarSafeInsets : 3
 Added EnumItem StudioStyleGuideColor.OnboardingCover : 132
 Added EnumItem StudioStyleGuideColor.OnboardingHighlight : 133
 Added EnumItem StudioStyleGuideColor.OnboardingShadow : 134
@@ -108,23 +85,28 @@ Changed the memory category of Class AudioReverb
 	from: "Instances"
 	  to: "Internal"
 
+Changed the thread safety of Function DynamicImage:ReadPixels 
+	from: {🧬Unsafe}
+	  to: {🧬Safe}
+
 Changed the parameters of Event VoiceChatService.SubscriptionHandshakeAcked 
 	from: (int eventTag, string handshakeAnswer, string userToMute, string sessionId)
-	  to: (int eventTag, string handshakeAnswer, string usersToMute, string sessionId)
+	  to: (int64 eventTag, string handshakeAnswer, string usersToMute, string sessionId)
 
 Changed the parameters of Event VoiceChatService.SubscriptionHandshakeCompleted 
 	from: (string subscriptionInfo, string sessionId)
-	  to: (string sessionId)
+	  to: (string sessionId, int64 eventTag)
 
 Changed the parameters of Event VoiceChatService.SubscriptionHandshakeInitiated 
 	from: (string handshakeOffer, string subscriptionInfo, bool isNewConnection, string sessionId)
-	  to: (string handshakeOffer, string newSubscriptionStates, bool isNewConnection, string sessionId)
+	  to: (string handshakeOffer, string newSubscriptionStates, bool isNewConnection, string sessionId, int64 eventTag)
 
 Removed Function AssetImportService:GetAllTemplates
 Removed Function AssetImportService:GetTemplate
 Removed Function AssetImportService:RemoveTemplate
 Removed Function AssetImportService:SaveTemplate
-Removed Function Humanoid:ApplyDescriptionBlocking
+Removed Function AssetImportSession:ApplyTemplate
+Removed Function BaseImportData:CreateTemplateFromData
 Removed Function StudioWidgetsService:ShowSpotlight
-
-Removed Event AssetImportSession.UploadCompleteDeprecated
+Removed Function TutorialService:HideOnlyNamedWidgets
+Removed Function TutorialService:ShowOnlyNamedWidgets

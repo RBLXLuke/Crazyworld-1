@@ -25,6 +25,8 @@ Added EnumItem StudioStyleGuideColor.OnboardingCover : 132
 Added EnumItem StudioStyleGuideColor.OnboardingHighlight : 133
 Added EnumItem StudioStyleGuideColor.OnboardingShadow : 134
 
+Added Tag [NotReplicated] to Class StudioAttachment
+
 Changed the memory category of Class AudioAnalyzer 
 	from: "Instances"
 	  to: "Internal"
@@ -110,3 +112,5 @@ Removed Function BaseImportData:CreateTemplateFromData
 Removed Function StudioWidgetsService:ShowSpotlight
 Removed Function TutorialService:HideOnlyNamedWidgets
 Removed Function TutorialService:ShowOnlyNamedWidgets
+
+Removed Tag [NotCreatable] from Class StudioCallout

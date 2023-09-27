@@ -1,3 +1,5 @@
+Version 597 (DEV BUILD)
+
 Added Class AvatarCreationService : Instance [NotCreatable] [Service] [NotReplicated]
 	Added Function Tuple AvatarCreationService:PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription) [Yields]
 

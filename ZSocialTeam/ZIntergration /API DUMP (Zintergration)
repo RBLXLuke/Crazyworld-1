@@ -89,6 +89,10 @@ Changed the memory category of Class AudioReverb
 	from: "Instances"
 	  to: "Internal"
 
+Changed the return-type of Function ScriptEditorService:UpdateSourceAsync 
+	from: Tuple
+	  to: void
+
 Changed the thread safety of Function DynamicImage:ReadPixels 
 	from: {🧬Unsafe}
 	  to: {🧬Safe}

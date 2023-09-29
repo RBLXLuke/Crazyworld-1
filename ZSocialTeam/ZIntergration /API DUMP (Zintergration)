@@ -143,5 +143,4 @@ Removed Function StudioWidgetsService:ShowSpotlight
 Removed Function TutorialService:HideOnlyNamedWidgets
 Removed Function TutorialService:ShowOnlyNamedWidgets
 
-Removed Tag [NotBrowsable] from Property Humanoid.EvaluateStateMachine
 Removed Tag [NotCreatable] from Class StudioCallout

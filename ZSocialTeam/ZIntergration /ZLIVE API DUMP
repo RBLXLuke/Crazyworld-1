@@ -1,4 +1,4 @@
-Version 596
+Version 596 (LIVE)
 
 Added Class AccessoryDescription : Instance [NotBrowsable]
 	Added Property Enum.AccessoryType AccessoryDescription.AccessoryType
@@ -36,3 +36,5 @@ Added EnumItem ScreenInsets.TopbarSafeInsets : 3
 Removed Function Humanoid:ApplyDescriptionBlocking
 
 Removed Event AssetImportSession.UploadCompleteDeprecated
+
+Removed Tag [NotBrowsable] from Property Humanoid.EvaluateStateMachine
